@@ -1,0 +1,6 @@
+_site
+.DS_Store
+nbproject
+*.*~
+.sass-cache
+_posts/*.md
