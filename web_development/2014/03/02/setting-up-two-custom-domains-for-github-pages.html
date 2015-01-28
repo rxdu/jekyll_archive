@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Setting Up Two Custom Domains for Github Pages | Ruixiang Du</title>
+        
+          <meta name="author" content="rxdu">
+        
+        <meta name="title" content="Setting Up Two Custom Domains for Github Pages" >
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+	<meta name="keywords" content="some, relevant, keywords, for, usage, in metatags" />
+
+
+  <meta name="description" content="According to offical tutorial, “You can only have one custom domain for any given set of Pages. If you want multiple domains to point to the same Pages, you will need to use a service that can redirect the other domains to your Pages domain.”
+
+">
+  <meta property="og:description" content="According to offical tutorial, “You can only have one custom domain for any given set of Pages. If you want multiple domains to point to the same Pages, you will need to use a service that can redirect the other domains to your Pages domain.”
+
+" />
+  <meta name="twitter:description" content="According to offical tutorial, “You can only have one custom domain for any given set of Pages. If you want multiple domains to point to the same Pages, you will need to use a service that can redirect the other domains to your Pages domain.”
+
+" />
+
+<meta property="og:title" content="Setting Up Two Custom Domains for Github Pages" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/sharer.png" />
+<meta property="og:url" content="/web_development/2014/03/02/setting-up-two-custom-domains-for-github-pages.html" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Setting Up Two Custom Domains for Github Pages" />
+<meta name="twitter:image" content="/sharer.png" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/monokai.css">
+    </head>
+    <body class="wrap">
+      <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+
+<header>
+  <h1 class="site-title" style="font-family: 'Dancing Script', serif;"><a href="/">Ruixiang Du</a></h1> 
+  <!-- <h1 class="site-title"><a href="/">Ruixiang Du</a></h1> -->
+  <nav class="main-nav">
+    <a href="#" class="opener show-on-mobiles">...</a>
+    <div class="clear-opener show-on-mobiles"></div>
+    <div class="grid">
+      <ul>
+        <li><a href="/">Home</a></li>
+		<li><a href="/resume">Resume</a></li>
+		<li><a href="/research">Research</a></li>
+		<li><a href="/devel_zone">Devel Zone</a></li>
+		<li><a href="/tech_notes">Tech Notes</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+      <section class="content">
+        <div id="home" class="grid post">
+<div class="unit whole">
+<article>
+	<header>
+		<h1>Setting Up Two Custom Domains for Github Pages</h1>
+		<p class="meta">
+			<time class="timeago postlist-meta" datetime="2014-03-02">March 2, 2014</time>
+			<a class="button blue share" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;">Share on fb</a>
+			
+				<a class="button blue share" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;">Share on twitter</a>
+			
+		</p>
+	</header>
+	<section>
+		<p>According to <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">offical tutorial</a>, “You can only have one custom domain for any given set of Pages. If you want multiple domains to point to the same Pages, you will need to use a service that can redirect the other domains to your Pages domain.”</p>
+
+<p>This post gives an example about how to do the redirection with two domain names from <a href="https://www.namecheap.com/">namecheap</a> and <a href="https://www.name.com/">name.com</a> respectively.</p>
+
+<!-- more -->
+
+<p>My personal feeling is that namecheap provides better user experience in managing your domains. You can get what you want very easily and their <a href="https://www.namecheap.com/support/knowledgebase/article/settingup_hostrecords">help page</a> is indeed very helpful and can save you some time searching on the Internet. Name.com also has a nice-looking management interface, but it seems they don’t provide as many functionalities as namecheap does. I can get the redirection working without any pain but I failed to do the same thing on name.com. (I’m not a person who is familiar with web development nor network. If you are one, maybe you could ignore this comment.)</p>
+
+<p>In this example, I use domainA(“rdu.im” from name.com) as the main method to access my github pages and use domainB(“rxdu.me” from namecheap) to do the redirection.</p>
+
+<ol>
+  <li>
+    <p>Add a CNAME file, which includes your primary domain name, to your github page repository </p>
+  </li>
+  <li>
+    <p>On namecheap:
+From the “Host Management” section on the left side, go to “All Host Records”. Add just one record:</p>
+  </li>
+</ol>
+
+<p>HOST NAME: @; IP ADDRESS/URL:http://rxdu.github.io; RECORD TYPE:redirect; TTL:1800</p>
+
+<p><img src="/img/posts/namecheap_config.png" width="850" /></p>
+
+<ol>
+  <li>On name.com:
+Go to DNS Record and add two records:</li>
+</ol>
+
+<p>Type:A; Host:rdu.im; Answer:192.30.252.153; TTL:1800</p>
+
+<p>Type:A; Host:rdu.im; Answer:192.30.252.154; TTL:1800</p>
+
+<p><img src="/img/posts/namecom_config.png" width="850" /></p>
+
+<p>After finishing the above 3 three steps, you should be all set. Wait for some time and check if both of the domains work properly.</p>
+
+
+	</section>
+	
+	<footer>
+		<p><a href="#" id="showComments">Comments</a></p>
+		<div id="disqus_thread"></div>
+	</footer>
+	<script>
+		(function(w){
+			var hidden = true;
+			var disqus_shortname = '';
+			var cmtBtn = document.getElementById("showComments");
+			var dt = document.getElementById("disqus_thread");
+
+			cmtBtn.addEventListener("click", function(e){
+				e.preventDefault();
+				if(disqus_shortname === ''){
+					disqus_shortname = 'rxdugit';
+					dt.innerHTML = 'Loading comments...';
+					(function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+				}
+				if(hidden){
+					dt.setAttribute('style','display:block');
+					this.innerHTML = 'Hide Comments';
+				}else{
+					dt.setAttribute('style','display:none');
+					this.innerHTML = 'Comments';
+				}
+				hidden = !hidden;
+			});
+		})(window);
+	</script>
+	
+</article>
+</div>
+</div>
+      </section>
+      <footer class="grid site-footer">
+        <p>&copy;&nbsp;Ruixiang Du</p>
+        <p><small>Powered by <a href="http://jekyllrb.com" target="_blank"><em>Jekyll</em></a> using <a href="http://bitwiser.in/bitwiser/" target="_blank"><em>Bitwiser</em></a> theme.</small></p>
+      </footer>
+      
+      <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var hidden = true;
+        var menu = document.querySelector(".main-nav");
+        var opener = document.querySelector(".opener");
+        opener.addEventListener("click", function(e){
+          e.preventDefault();
+          if(hidden){
+            menu.setAttribute("class", "main-nav active-menu");
+          }else{
+            menu.setAttribute("class", "main-nav");
+          }
+          hidden = !hidden;
+        });
+      });
+      </script>
+    </body>
+</html>

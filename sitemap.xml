@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+    <url>
+      <loc>/web_development/2015/01/27/site-migrated-from-octopress-to-jekyll.html</loc>
+      
+        <lastmod>2015-01-27T00:00:00-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/ros/programming/2014/03/25/using-qt-in-ros-catkin-packages.html</loc>
+      
+        <lastmod>2014-03-25T18:14:35-04:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/ubuntu/2014/03/24/install-java-plugin-for-web-browers-on-ubuntu.html</loc>
+      
+        <lastmod>2014-03-24T22:39:20-04:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/web_development/2014/03/02/setting-up-two-custom-domains-for-github-pages.html</loc>
+      
+        <lastmod>2014-03-02T20:20:01-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/c/c++/programming/2014/02/23/how-to-use-eclipse-for-cmake-projects.html</loc>
+      
+        <lastmod>2014-02-23T22:50:31-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/programming/2014/02/20/a-tutorial-of-cmake.html</loc>
+      
+        <lastmod>2014-02-20T13:37:41-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/stm32/embedded/2014/01/21/use-stm32-peripheral-library-with-emide.html</loc>
+      
+        <lastmod>2014-01-21T22:22:27-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/ubuntu/raspberry_pi/2014/01/21/remote-desktop-of-ubuntu-12-dot-04.html</loc>
+      
+        <lastmod>2014-01-21T22:19:51-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/ubuntu/2014/01/21/disable-guest-account-in-ubuntu.html</loc>
+      
+        <lastmod>2014-01-21T22:16:55-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/ubuntu/eclipse/2014/01/21/install-eclipse-in-ubuntu.html</loc>
+      
+        <lastmod>2014-01-21T22:11:45-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/ros/turtlebot/2014/01/21/software-upgrade-for-turtlebot.html</loc>
+      
+        <lastmod>2014-01-21T21:52:23-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/ubuntu/gazebo/ros/2014/01/21/how-to-fix-libgazebo-common-dot-so-dot-1-not-found-error-on-ubuntu-12-dot-04.html</loc>
+      
+        <lastmod>2014-01-21T21:36:56-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/ubuntu/linux/2014/01/20/basic-commands-of-ubuntu.html</loc>
+      
+        <lastmod>2014-01-20T18:15:40-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/latex/2014/01/20/use-of-ieee-conference-latex-template-with-bib-file.html</loc>
+      
+        <lastmod>2014-01-20T18:05:23-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/web_development/octopress/2014/01/20/tips-for-the-use-of-octopress.html</loc>
+      
+        <lastmod>2014-01-20T15:36:18-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>/web_development/2014/01/19/first-blog.html</loc>
+      
+        <lastmod>2014-01-19T14:48:01-05:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+  
+    
+  
+    
+      <url>
+        <loc>/about.html</loc>
+        <lastmod>2014-09-07T07:01:30-04:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+       </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+        <loc>/index.html</loc>
+        <lastmod>2014-09-07T07:01:30-04:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+       </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</urlset>

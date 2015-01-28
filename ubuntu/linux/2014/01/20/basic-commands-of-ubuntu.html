@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Basic Commands of Ubuntu | Ruixiang Du</title>
+        
+          <meta name="author" content="rxdu">
+        
+        <meta name="title" content="Basic Commands of Ubuntu" >
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+	<meta name="keywords" content="some, relevant, keywords, for, usage, in metatags" />
+
+
+  <meta name="description" content="
+  Switch between GUI and virtual console:
+
+
+">
+  <meta property="og:description" content="
+  Switch between GUI and virtual console:
+
+
+" />
+  <meta name="twitter:description" content="
+  Switch between GUI and virtual console:
+
+
+" />
+
+<meta property="og:title" content="Basic Commands of Ubuntu" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/sharer.png" />
+<meta property="og:url" content="/ubuntu/linux/2014/01/20/basic-commands-of-ubuntu.html" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Basic Commands of Ubuntu" />
+<meta name="twitter:image" content="/sharer.png" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/monokai.css">
+    </head>
+    <body class="wrap">
+      <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+
+<header>
+  <h1 class="site-title" style="font-family: 'Dancing Script', serif;"><a href="/">Ruixiang Du</a></h1> 
+  <!-- <h1 class="site-title"><a href="/">Ruixiang Du</a></h1> -->
+  <nav class="main-nav">
+    <a href="#" class="opener show-on-mobiles">...</a>
+    <div class="clear-opener show-on-mobiles"></div>
+    <div class="grid">
+      <ul>
+        <li><a href="/">Home</a></li>
+		<li><a href="/resume">Resume</a></li>
+		<li><a href="/research">Research</a></li>
+		<li><a href="/devel_zone">Devel Zone</a></li>
+		<li><a href="/tech_notes">Tech Notes</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+      <section class="content">
+        <div id="home" class="grid post">
+<div class="unit whole">
+<article>
+	<header>
+		<h1>Basic Commands of Ubuntu</h1>
+		<p class="meta">
+			<time class="timeago postlist-meta" datetime="2014-01-20">January 20, 2014</time>
+			<a class="button blue share" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;">Share on fb</a>
+			
+				<a class="button blue share" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;">Share on twitter</a>
+			
+		</p>
+	</header>
+	<section>
+		<ol>
+  <li>
+    <p>Switch between GUI and virtual console:</p>
+
+    <p>Console: Ctrl+Alt+F2 ((F1), F2, F3, F4, F5, F6)</p>
+
+    <p>There are six virtual consoles. The console on F1 is used for debug and log output, so is best avoided.</p>
+
+    <p>GUI: Ctrl+Alt+F7</p>
+
+    <p>If GUI crashes, it might be possible to fix the problem in virtual consoles.</p>
+  </li>
+</ol>
+
+<!-- more -->
+
+<ol>
+  <li>Basic file operation
+    <ul>
+      <li>Get help: 
+ <code>
+ command --help
+</code>
+ Run a program: type 
+ <code>
+ ./programname
+</code></li>
+      <li>
+        <p>ls: list files</p>
+      </li>
+      <li>
+        <p>cp: copy files and folders</p>
+      </li>
+      <li>
+        <p>mv: move file or folder</p>
+      </li>
+      <li>
+        <p>rm: remove files</p>
+      </li>
+      <li>ln: create a link to a file
+ <code>
+ ln -s myfile.doc ~/Desktop/
+</code></li>
+      <li>grep: search through specified file for a word or phrase
+ <code>
+ grep -I wireless myfile.txt
+</code></li>
+      <li>
+        <p>man: view the manual page for specified command</p>
+      </li>
+      <li>
+        <p>nano: simple text editor</p>
+      </li>
+      <li>
+        <p>umount: unmount attached storage device</p>
+      </li>
+      <li>locate: find specified file; relies on a background datebase that is periodically and automatically upated. The database can be manually updated by typing the “sudo updatedb” command.</li>
+    </ul>
+  </li>
+  <li>
+    <p>sudo and gksu</p>
+
+    <p>if you run a graphical application from the command-line it’s necessary to precede it with <em>gksu</em> instead of <em>sudo</em>.</p>
+
+    <p>Temporarily switching to root: sudo su</p>
+
+    <p>Return to ordinary user account: exit or Ctrl+D</p>
+  </li>
+  <li>
+    <p>List and kill processes</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>ps: ps or ps aux</td>
+          <td>grep firefox</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>kill: kill + PID</p>
+  </li>
+  <li>
+    <p>Zip and upzip</p>
+
+    <p>zip a file: 
+ <code>
+ zip report.zip report.doc
+</code>
+ zip a folder: 
+ <code>
+ zip -r reports.zip reports
+</code>
+ upzip a zip: 
+ <code>
+ upzip archive.zip
+</code>
+ list files in zip: 
+ <code>
+ upzip -l archive.zip
+</code></p>
+  </li>
+  <li>
+    <p>Redirection</p>
+
+    <p>”&gt;”: redirect to file</p>
+
+    <p>”»”: redirect to the bottom of file
+<code>
+ls &gt; listing.txt
+ls &gt;&gt; listing.txt
+</code></p>
+  </li>
+  <li>
+    <p>Piping</p>
+
+    <p>pass the output of one command to another
+<code>
+ ls|grep report.doc
+</code></p>
+  </li>
+</ol>
+
+	</section>
+	
+	<footer>
+		<p><a href="#" id="showComments">Comments</a></p>
+		<div id="disqus_thread"></div>
+	</footer>
+	<script>
+		(function(w){
+			var hidden = true;
+			var disqus_shortname = '';
+			var cmtBtn = document.getElementById("showComments");
+			var dt = document.getElementById("disqus_thread");
+
+			cmtBtn.addEventListener("click", function(e){
+				e.preventDefault();
+				if(disqus_shortname === ''){
+					disqus_shortname = 'rxdugit';
+					dt.innerHTML = 'Loading comments...';
+					(function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+				}
+				if(hidden){
+					dt.setAttribute('style','display:block');
+					this.innerHTML = 'Hide Comments';
+				}else{
+					dt.setAttribute('style','display:none');
+					this.innerHTML = 'Comments';
+				}
+				hidden = !hidden;
+			});
+		})(window);
+	</script>
+	
+</article>
+</div>
+</div>
+      </section>
+      <footer class="grid site-footer">
+        <p>&copy;&nbsp;Ruixiang Du</p>
+        <p><small>Powered by <a href="http://jekyllrb.com" target="_blank"><em>Jekyll</em></a> using <a href="http://bitwiser.in/bitwiser/" target="_blank"><em>Bitwiser</em></a> theme.</small></p>
+      </footer>
+      
+      <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var hidden = true;
+        var menu = document.querySelector(".main-nav");
+        var opener = document.querySelector(".opener");
+        opener.addEventListener("click", function(e){
+          e.preventDefault();
+          if(hidden){
+            menu.setAttribute("class", "main-nav active-menu");
+          }else{
+            menu.setAttribute("class", "main-nav");
+          }
+          hidden = !hidden;
+        });
+      });
+      </script>
+    </body>
+</html>

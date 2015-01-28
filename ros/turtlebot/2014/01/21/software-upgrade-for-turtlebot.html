@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Software Upgrade for Turtlebot | Ruixiang Du</title>
+        
+          <meta name="author" content="rxdu">
+        
+        <meta name="title" content="Software Upgrade for Turtlebot" >
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+	<meta name="keywords" content="some, relevant, keywords, for, usage, in metatags" />
+
+
+  <meta name="description" content="This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki. 
+
+">
+  <meta property="og:description" content="This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki. 
+
+" />
+  <meta name="twitter:description" content="This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki. 
+
+" />
+
+<meta property="og:title" content="Software Upgrade for Turtlebot" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/sharer.png" />
+<meta property="og:url" content="/ros/turtlebot/2014/01/21/software-upgrade-for-turtlebot.html" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Software Upgrade for Turtlebot" />
+<meta name="twitter:image" content="/sharer.png" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/monokai.css">
+    </head>
+    <body class="wrap">
+      <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+
+<header>
+  <h1 class="site-title" style="font-family: 'Dancing Script', serif;"><a href="/">Ruixiang Du</a></h1> 
+  <!-- <h1 class="site-title"><a href="/">Ruixiang Du</a></h1> -->
+  <nav class="main-nav">
+    <a href="#" class="opener show-on-mobiles">...</a>
+    <div class="clear-opener show-on-mobiles"></div>
+    <div class="grid">
+      <ul>
+        <li><a href="/">Home</a></li>
+		<li><a href="/resume">Resume</a></li>
+		<li><a href="/research">Research</a></li>
+		<li><a href="/devel_zone">Devel Zone</a></li>
+		<li><a href="/tech_notes">Tech Notes</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+      <section class="content">
+        <div id="home" class="grid post">
+<div class="unit whole">
+<article>
+	<header>
+		<h1>Software Upgrade for Turtlebot</h1>
+		<p class="meta">
+			<time class="timeago postlist-meta" datetime="2014-01-21">January 21, 2014</time>
+			<a class="button blue share" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;">Share on fb</a>
+			
+				<a class="button blue share" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;">Share on twitter</a>
+			
+		</p>
+	</header>
+	<section>
+		<p>This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki. </p>
+
+<!-- more -->
+
+<p>The ROS wiki page <a href="http://wiki.ros.org/Robots/TurtleBot/Robot%20Setup">Robots/TurtleBot/Robot Setup</a> is a good reference but it is not always up to date. It uses the system image provided by willow garage, which has integrated most packages required to run turtlebot. What you mainly need to do are just installing Ubuntu with the modified image and then making some small updates. But it’s not easy to find sufficient information about that image to make sure it’s exactly what you want and it’s fully compatible with your netbook. So this tutorial presents how to install the necessary components separately. </p>
+
+<p><strong>Install Ubuntu</strong></p>
+
+<p>You can download the iso image of Ubuntu 12.04 from its <a href="http://www.ubuntu.com/download">official website</a>. Then burn the image to a flash drive or CD to make a bootable media. The installation steps are very straightforward and you mainly need to make some easy choices and click “next”. If necessary, you can have a look at this page <a href="http://www.ubuntu.com/download/desktop/install-desktop-long-term-support">Install Ubuntu 12.04.2 LTS</a>.</p>
+
+<p><strong>Configure Wireless Network of the Netbook</strong></p>
+
+<p>Now you have a netbook running Ubuntu. To complete the following steps, you need to make the netbook to have access to the Internet. To connect to WPI network (either wireless or wired), you need to get your computer registered and install required certificate files. Definitely it’s more convenient to use the wireless network since the robot needs to move around. You can follow this WPI web page to complete the configuration: <a href="http://www.wpi.edu/Academics/CCC/Netops/Wireless/Setup/Linux.html">link</a>.</p>
+
+<p><strong>Install ROS</strong></p>
+
+<p>Follow this wiki page <a href="http://www.ros.org/wiki/groovy/Installation/Ubuntu">groovy/Installation/Ubuntu</a> to finish the installation of ROS groovy. It should be easy to find the latest installation instruction if the link for the old one is invalid.</p>
+
+<p><strong>Install Turtlebot Packages</strong></p>
+
+<p>This <a href="http://ros.org/wiki/Robots/TurtleBot">Robots/Turtlebot</a> page provides well written documents of ROS packages for turtlebot. First follow <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Installation">Installation</a> step by step. The easiest way should be “Install from Debs”. On the <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Post-Installation%20Setup">Post-Installation Setup</a> page, you first need to install chrony for clock synchronization. Don’t forget to check the section ‘'’Special Cases’’’. Probably you need to take care of <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Create%20Base">Create Base</a> and <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Netbook%20Battery%20Setup">Netbook Battery Setup</a>. Be careful that the Netbook Battery Setup instruction is not up to date at the time this wiki is written. The robot cannot find battery information of the netbook from “/proc/acpi/battery/BAT1”. Instead, use “/sys/class/power_supply/BAT1” and the command changes to:</p>
+
+<p><code>
+ $export TURTLEBOT_BATTERY=/proc/acpi/battery/BAT1
+</code></p>
+
+<p>Follow <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Workstation%20Installation">Workstation Installation</a> and <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Network%20Configuration">Network Configuration</a> to make sure your robot can communicate with the work station successfully.</p>
+
+<p><strong>More Configurations</strong></p>
+
+<p>Now you can step to the next section of [http://ros.org/wiki/Robots/TurtleBot Robots/Turtlebot]. Work is still not done. When following the <a href="http://ros.org/wiki/turtlebot_bringup/Tutorials/groovy/TurtleBot%20Bringup">turtlebot_bringup/Tutorials/groovy/TurtleBot Bringup</a>, probably you will get errors when you try to execute roslaunch command:</p>
+
+<p><code>
+$roslaunch turtlebot_bringup minimal.launch
+</code></p>
+
+<p>If you get a error message like this:</p>
+
+<p><code>
+Failed to open port /dev/ttyUSB0.  Please make sure the Create cable is plugged into the computer.
+</code></p>
+
+<p>It’s because you don’t have the necessary access permission to the ttyUSB0 device. The solution is to add the user account you’re using to the “dialout” group.</p>
+
+<p><code>
+ $sudo adduser second_user dialout
+</code></p>
+
+<p>Now you should be able to successfully roslaunch the above launch file. After starting minimal.launch and then turtlebot_dashboard.launch, you should get information of the robot from the dashboard.</p>
+
+<p><strong>Conclusion</strong></p>
+
+<p>If you have managed to get through all steps stated above, you’re all set for the upgrade. Actually, the above instruction should still be helpful when you’re trying to upgrade the software to a newer version in the future. Basically the ideas should stay the same. Just make sure you have the right combination of Ubuntu version and ROS version. You also need to check all relevant packages for the turtlebot and your project have got support to the version of ROS you’re trying to use.</p>
+
+
+	</section>
+	
+	<footer>
+		<p><a href="#" id="showComments">Comments</a></p>
+		<div id="disqus_thread"></div>
+	</footer>
+	<script>
+		(function(w){
+			var hidden = true;
+			var disqus_shortname = '';
+			var cmtBtn = document.getElementById("showComments");
+			var dt = document.getElementById("disqus_thread");
+
+			cmtBtn.addEventListener("click", function(e){
+				e.preventDefault();
+				if(disqus_shortname === ''){
+					disqus_shortname = 'rxdugit';
+					dt.innerHTML = 'Loading comments...';
+					(function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+				}
+				if(hidden){
+					dt.setAttribute('style','display:block');
+					this.innerHTML = 'Hide Comments';
+				}else{
+					dt.setAttribute('style','display:none');
+					this.innerHTML = 'Comments';
+				}
+				hidden = !hidden;
+			});
+		})(window);
+	</script>
+	
+</article>
+</div>
+</div>
+      </section>
+      <footer class="grid site-footer">
+        <p>&copy;&nbsp;Ruixiang Du</p>
+        <p><small>Powered by <a href="http://jekyllrb.com" target="_blank"><em>Jekyll</em></a> using <a href="http://bitwiser.in/bitwiser/" target="_blank"><em>Bitwiser</em></a> theme.</small></p>
+      </footer>
+      
+      <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var hidden = true;
+        var menu = document.querySelector(".main-nav");
+        var opener = document.querySelector(".opener");
+        opener.addEventListener("click", function(e){
+          e.preventDefault();
+          if(hidden){
+            menu.setAttribute("class", "main-nav active-menu");
+          }else{
+            menu.setAttribute("class", "main-nav");
+          }
+          hidden = !hidden;
+        });
+      });
+      </script>
+    </body>
+</html>

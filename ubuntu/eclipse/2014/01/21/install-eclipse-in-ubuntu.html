@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Install Eclipse in Ubuntu | Ruixiang Du</title>
+        
+          <meta name="author" content="rxdu">
+        
+        <meta name="title" content="Install Eclipse in Ubuntu" >
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+	<meta name="keywords" content="some, relevant, keywords, for, usage, in metatags" />
+
+
+  <meta name="description" content="First make sure you have installed JAVA in ubuntu to run Eclipse.
+
+">
+  <meta property="og:description" content="First make sure you have installed JAVA in ubuntu to run Eclipse.
+
+" />
+  <meta name="twitter:description" content="First make sure you have installed JAVA in ubuntu to run Eclipse.
+
+" />
+
+<meta property="og:title" content="Install Eclipse in Ubuntu" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/sharer.png" />
+<meta property="og:url" content="/ubuntu/eclipse/2014/01/21/install-eclipse-in-ubuntu.html" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Install Eclipse in Ubuntu" />
+<meta name="twitter:image" content="/sharer.png" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/monokai.css">
+    </head>
+    <body class="wrap">
+      <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+
+<header>
+  <h1 class="site-title" style="font-family: 'Dancing Script', serif;"><a href="/">Ruixiang Du</a></h1> 
+  <!-- <h1 class="site-title"><a href="/">Ruixiang Du</a></h1> -->
+  <nav class="main-nav">
+    <a href="#" class="opener show-on-mobiles">...</a>
+    <div class="clear-opener show-on-mobiles"></div>
+    <div class="grid">
+      <ul>
+        <li><a href="/">Home</a></li>
+		<li><a href="/resume">Resume</a></li>
+		<li><a href="/research">Research</a></li>
+		<li><a href="/devel_zone">Devel Zone</a></li>
+		<li><a href="/tech_notes">Tech Notes</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+      <section class="content">
+        <div id="home" class="grid post">
+<div class="unit whole">
+<article>
+	<header>
+		<h1>Install Eclipse in Ubuntu</h1>
+		<p class="meta">
+			<time class="timeago postlist-meta" datetime="2014-01-21">January 21, 2014</time>
+			<a class="button blue share" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;">Share on fb</a>
+			
+				<a class="button blue share" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;">Share on twitter</a>
+			
+		</p>
+	</header>
+	<section>
+		<p>First make sure you have installed JAVA in ubuntu to run Eclipse.</p>
+
+<p><code>
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt-get update
+$ sudo apt-get install oracle-java7-installer
+</code></p>
+
+<ul>
+  <li>Download the latest Eclipse from its official website.</li>
+  <li>Extract the files from the archive.</li>
+  <li>Move the extracted folder to whereever you want to put it. </li>
+</ul>
+
+<p><code>
+$ sudo mv eclipse /opt/ 
+</code></p>
+
+<ul>
+  <li>Create a symlink in /usr/local/bin using</li>
+</ul>
+
+<p><code>
+$ cd /usr/local/bin
+$ sudo ln -s /opt/eclipse/eclipse
+</code></p>
+
+<ul>
+  <li>Now you should be able to run eclipse from a terminal.</li>
+</ul>
+
+	</section>
+	
+	<footer>
+		<p><a href="#" id="showComments">Comments</a></p>
+		<div id="disqus_thread"></div>
+	</footer>
+	<script>
+		(function(w){
+			var hidden = true;
+			var disqus_shortname = '';
+			var cmtBtn = document.getElementById("showComments");
+			var dt = document.getElementById("disqus_thread");
+
+			cmtBtn.addEventListener("click", function(e){
+				e.preventDefault();
+				if(disqus_shortname === ''){
+					disqus_shortname = 'rxdugit';
+					dt.innerHTML = 'Loading comments...';
+					(function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+				}
+				if(hidden){
+					dt.setAttribute('style','display:block');
+					this.innerHTML = 'Hide Comments';
+				}else{
+					dt.setAttribute('style','display:none');
+					this.innerHTML = 'Comments';
+				}
+				hidden = !hidden;
+			});
+		})(window);
+	</script>
+	
+</article>
+</div>
+</div>
+      </section>
+      <footer class="grid site-footer">
+        <p>&copy;&nbsp;Ruixiang Du</p>
+        <p><small>Powered by <a href="http://jekyllrb.com" target="_blank"><em>Jekyll</em></a> using <a href="http://bitwiser.in/bitwiser/" target="_blank"><em>Bitwiser</em></a> theme.</small></p>
+      </footer>
+      
+      <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var hidden = true;
+        var menu = document.querySelector(".main-nav");
+        var opener = document.querySelector(".opener");
+        opener.addEventListener("click", function(e){
+          e.preventDefault();
+          if(hidden){
+            menu.setAttribute("class", "main-nav active-menu");
+          }else{
+            menu.setAttribute("class", "main-nav");
+          }
+          hidden = !hidden;
+        });
+      });
+      </script>
+    </body>
+</html>

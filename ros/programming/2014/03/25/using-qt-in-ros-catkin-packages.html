@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Using QT in ROS Catkin Packages | Ruixiang Du</title>
+        
+          <meta name="author" content="rxdu">
+        
+        <meta name="title" content="Using QT in ROS Catkin Packages" >
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+	<meta name="keywords" content="some, relevant, keywords, for, usage, in metatags" />
+
+
+  <meta name="description" content="Rviz plugins are basically QT widgets. CMakeLists.txt of the ROS package using QT needs to be modified accordingly for the compilation. ROS wiki provides several tutorials/examples about how to write a plugin for Rviz and how to configure the package. However, these materials are mainly for rosbuild. This article introduces how to use QT in ROS catkin packages, in other words, how to use QT for a package of ROS Groovy/Hydro or later. This article shows how to write the CMakeLists.txt for a package, which uses librviz for visualization.
+
+">
+  <meta property="og:description" content="Rviz plugins are basically QT widgets. CMakeLists.txt of the ROS package using QT needs to be modified accordingly for the compilation. ROS wiki provides several tutorials/examples about how to write a plugin for Rviz and how to configure the package. However, these materials are mainly for rosbuild. This article introduces how to use QT in ROS catkin packages, in other words, how to use QT for a package of ROS Groovy/Hydro or later. This article shows how to write the CMakeLists.txt for a package, which uses librviz for visualization.
+
+" />
+  <meta name="twitter:description" content="Rviz plugins are basically QT widgets. CMakeLists.txt of the ROS package using QT needs to be modified accordingly for the compilation. ROS wiki provides several tutorials/examples about how to write a plugin for Rviz and how to configure the package. However, these materials are mainly for rosbuild. This article introduces how to use QT in ROS catkin packages, in other words, how to use QT for a package of ROS Groovy/Hydro or later. This article shows how to write the CMakeLists.txt for a package, which uses librviz for visualization.
+
+" />
+
+<meta property="og:title" content="Using QT in ROS Catkin Packages" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/sharer.png" />
+<meta property="og:url" content="/ros/programming/2014/03/25/using-qt-in-ros-catkin-packages.html" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Using QT in ROS Catkin Packages" />
+<meta name="twitter:image" content="/sharer.png" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/monokai.css">
+    </head>
+    <body class="wrap">
+      <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+
+<header>
+  <h1 class="site-title" style="font-family: 'Dancing Script', serif;"><a href="/">Ruixiang Du</a></h1> 
+  <!-- <h1 class="site-title"><a href="/">Ruixiang Du</a></h1> -->
+  <nav class="main-nav">
+    <a href="#" class="opener show-on-mobiles">...</a>
+    <div class="clear-opener show-on-mobiles"></div>
+    <div class="grid">
+      <ul>
+        <li><a href="/">Home</a></li>
+		<li><a href="/resume">Resume</a></li>
+		<li><a href="/research">Research</a></li>
+		<li><a href="/devel_zone">Devel Zone</a></li>
+		<li><a href="/tech_notes">Tech Notes</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+      <section class="content">
+        <div id="home" class="grid post">
+<div class="unit whole">
+<article>
+	<header>
+		<h1>Using QT in ROS Catkin Packages</h1>
+		<p class="meta">
+			<time class="timeago postlist-meta" datetime="2014-03-25">March 25, 2014</time>
+			<a class="button blue share" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;">Share on fb</a>
+			
+				<a class="button blue share" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;">Share on twitter</a>
+			
+		</p>
+	</header>
+	<section>
+		<p>Rviz plugins are basically QT widgets. CMakeLists.txt of the ROS package using QT needs to be modified accordingly for the compilation. ROS wiki provides several tutorials/examples about how to write a plugin for Rviz and how to configure the package. However, these materials are mainly for rosbuild. This article introduces how to use QT in ROS catkin packages, in other words, how to use QT for a package of ROS Groovy/Hydro or later. This article shows how to write the CMakeLists.txt for a package, which uses librviz for visualization.</p>
+
+<!-- more -->
+
+<p>The example package includes the following files:</p>
+
+<p><code>
+++ rviz_gui_package
+ ++ src
+   +- rviz_gui.cpp
+   +- rviz_gui.h
+   +- rviz_gui.ui
+   +- main.cpp
+ +- CMakeLists.txt
+ +- package.xml
+</code></p>
+
+<p>To compile a QT executable widget, you need to add the following to your CMakeLists.txt:</p>
+
+<p>```
+find_package(Qt4 COMPONENTS QtCore QtGui REQUIRED)</p>
+
+<p>include(${QT_USE_FILE})
+add_definitions(-DQT_NO_KEYWORDS)
+add_definitions(${QT_DEFINITIONS})</p>
+
+<p>set(HEADER_FILES 
+  src/rviz_gui.h
+  include/myviz.h
+)</p>
+
+<p>set(SOURCE_FILES
+  src/rviz_gui.cpp
+  src/main.cpp
+  ${MOC_FILES}
+)</p>
+
+<p>set(FORM_FILES 
+  src/rviz_gui.ui
+)</p>
+
+<p>QT4_WRAP_CPP(MOC_SRC_H
+  ${HEADER_FILES}
+)</p>
+
+<p>QT4_WRAP_UI(MOC_GUI_H 
+  ${FORM_FILES}
+)</p>
+
+<p>include_directories(${CMAKE_CURRENT_BINARY_DIR})</p>
+
+<p>add_executable(rviz_gui ${SOURCE_FILES} ${MOC_SRC_H} ${MOC_GUI_H})
+target_link_libraries(rviz_gui ${QT_LIBRARIES} ${catkin_LIBRARIES})
+```</p>
+
+<p>To understand why you should do this, you need to understand the QT build system. For detailed illustration, read this <a href="http://qt-project.org/quarterly/view/using_cmake_to_build_qt_projects">Document</a> from qt-project.org. <strong>The image shown below is also from this document</strong>. I include it here just for convinence of reference.</p>
+
+<p><img src="/img/posts/qt-build-system.png" width="600" /></p>
+
+<p>The basic idea of the above code snippet, </p>
+
+<ul>
+  <li>Line 1-4 set up the environment.</li>
+  <li>Line 7-20 tells the build system the source/header/form files for the qt application.</li>
+  <li>Line 22-24 correspond to “generated moc_*.cpp” block in the above image.</li>
+  <li>Line 26-28 correspond to “generated ui_*.h” block in the above image.</li>
+  <li>No resource file is used in this example, so “Resource files” and “generated qrc_*.cpp” blocks are not used.</li>
+  <li>Line 30, according to <a href="http://qt-project.org/quarterly/view/using_cmake_to_build_qt_projects">Document</a>, “As all intermediate files are generated outside the source tree, the header file generated by uic will not be located by the compiler. In order to handle this, the build directory needs to be added to the list of include directories.”</li>
+  <li>Line 32-33 compile and link executables based on all user files and Qt intermediate files.</li>
+</ul>
+
+<p>The complete copy of <a href="https://github.com/rxdu/FallRiskProjectROS/blob/hydro_devel/fallrisk_gui/fallrisk_rviz_gui/CMakeLists.txt"><strong>CMakeLists.txt</strong></a> (modified from the original file generated by command catkin_create_pkg)</p>
+
+<h5 id="reference">Reference:</h5>
+<ol>
+  <li><a href="http://qt-project.org/quarterly/view/using_cmake_to_build_qt_projects">Using CMake to Build Qt Projects</a></li>
+  <li><a href="http://www.briangoldfain.com/2013/02/using-qt-in-a-ros-catkin-package/">Using QT in a ROS Catkin Package</a></li>
+</ol>
+
+
+	</section>
+	
+	<footer>
+		<p><a href="#" id="showComments">Comments</a></p>
+		<div id="disqus_thread"></div>
+	</footer>
+	<script>
+		(function(w){
+			var hidden = true;
+			var disqus_shortname = '';
+			var cmtBtn = document.getElementById("showComments");
+			var dt = document.getElementById("disqus_thread");
+
+			cmtBtn.addEventListener("click", function(e){
+				e.preventDefault();
+				if(disqus_shortname === ''){
+					disqus_shortname = 'rxdugit';
+					dt.innerHTML = 'Loading comments...';
+					(function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+				}
+				if(hidden){
+					dt.setAttribute('style','display:block');
+					this.innerHTML = 'Hide Comments';
+				}else{
+					dt.setAttribute('style','display:none');
+					this.innerHTML = 'Comments';
+				}
+				hidden = !hidden;
+			});
+		})(window);
+	</script>
+	
+</article>
+</div>
+</div>
+      </section>
+      <footer class="grid site-footer">
+        <p>&copy;&nbsp;Ruixiang Du</p>
+        <p><small>Powered by <a href="http://jekyllrb.com" target="_blank"><em>Jekyll</em></a> using <a href="http://bitwiser.in/bitwiser/" target="_blank"><em>Bitwiser</em></a> theme.</small></p>
+      </footer>
+      
+      <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var hidden = true;
+        var menu = document.querySelector(".main-nav");
+        var opener = document.querySelector(".opener");
+        opener.addEventListener("click", function(e){
+          e.preventDefault();
+          if(hidden){
+            menu.setAttribute("class", "main-nav active-menu");
+          }else{
+            menu.setAttribute("class", "main-nav");
+          }
+          hidden = !hidden;
+        });
+      });
+      </script>
+    </body>
+</html>
