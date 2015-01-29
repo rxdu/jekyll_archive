@@ -6,6 +6,20 @@ priority: 1.0
 changefreq: weekly
 ---
 
+<!-- Reference: http://thornelabs.net/2014/05/12/instant-search-with-twitter-bootstrap-jekyll-json-and-jquery.html -->
+<div class="unit whole">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav navbar-nav navbar-form dropdown">
+                <!-- Search text box -->
+                Search Title:&nbsp; 
+                <input id="search_input" data-toggle="dropdown" type="text" class="form-control" placeholder=" type key words" autofocus="autofocus" autocomplete="off" onkeyup="checkTextField();" />
+                <!-- Search results styled as a dropdown menu -->
+                <ul id="search_results" class="dropdown-menu" role="menu"></ul> 
+            </div>
+        </div><!-- /.navbar-collapse -->
+</div>
+
 {% for post in paginator.posts %}
 <div class="unit whole single-post-excerpt">
 	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
