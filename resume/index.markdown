@@ -3,7 +3,7 @@ layout: page
 ---
 
 <a name="TOP"></a>
-[EDUCATION](#EDUCATION)  |  [TECHNICAL SKILLS](#SKILLS)  |  [RESEARCH&TEACHING](#RATA)  
+[EDUCATION](#EDUCATION)  |  [TECHNICAL SKILLS](#SKILLS)  |  [RA&TA](#RATA)  
 [PROJECTS](#PROJECTS)  |  [HONORS](#HONORS)  |  [ACTIVITIES](#ACTIVITIES)
 
 <p align="right"><a href="{{ root_url }}/resume/resume.pdf">See the PDF version</a></p>
