@@ -1,0 +1,179 @@
+[
+    
+    {
+      "title"    : "Site Migrated from Octopress to Jekyll",
+      "href"     : "/web_development/2015/01/27/site-migrated-from-octopress-to-jekyll.html",
+      "date"     : {
+         "day"   : "27",
+         "month" : "January",
+         "year"  : "2015"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Using QT in ROS Catkin Packages",
+      "href"     : "/ros/programming/2014/03/25/using-qt-in-ros-catkin-packages.html",
+      "date"     : {
+         "day"   : "25",
+         "month" : "March",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Install Java Plugin for Web Browers on Ubuntu",
+      "href"     : "/ubuntu/2014/03/24/install-java-plugin-for-web-browers-on-ubuntu.html",
+      "date"     : {
+         "day"   : "24",
+         "month" : "March",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Setting Up Two Custom Domains for Github Pages",
+      "href"     : "/web_development/2014/03/02/setting-up-two-custom-domains-for-github-pages.html",
+      "date"     : {
+         "day"   : "02",
+         "month" : "March",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "How to use Eclipse for CMAKE Projects",
+      "href"     : "/c/c++/programming/2014/02/23/how-to-use-eclipse-for-cmake-projects.html",
+      "date"     : {
+         "day"   : "23",
+         "month" : "February",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "A Tutorial of CMAKE",
+      "href"     : "/programming/2014/02/20/a-tutorial-of-cmake.html",
+      "date"     : {
+         "day"   : "20",
+         "month" : "February",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Use STM32 Peripheral Library with emIDE",
+      "href"     : "/stm32/embedded/2014/01/21/use-stm32-peripheral-library-with-emide.html",
+      "date"     : {
+         "day"   : "21",
+         "month" : "January",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Remote Desktop of Ubuntu 12.04",
+      "href"     : "/ubuntu/raspberry_pi/2014/01/21/remote-desktop-of-ubuntu-12-dot-04.html",
+      "date"     : {
+         "day"   : "21",
+         "month" : "January",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Disable Guest Account in Ubuntu",
+      "href"     : "/ubuntu/2014/01/21/disable-guest-account-in-ubuntu.html",
+      "date"     : {
+         "day"   : "21",
+         "month" : "January",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Install Eclipse in Ubuntu",
+      "href"     : "/ubuntu/eclipse/2014/01/21/install-eclipse-in-ubuntu.html",
+      "date"     : {
+         "day"   : "21",
+         "month" : "January",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Software Upgrade for Turtlebot",
+      "href"     : "/ros/turtlebot/2014/01/21/software-upgrade-for-turtlebot.html",
+      "date"     : {
+         "day"   : "21",
+         "month" : "January",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "How to fix 'libgazebo_common.so.1 not found' error on Ubuntu 12.04",
+      "href"     : "/ubuntu/gazebo/ros/2014/01/21/how-to-fix-libgazebo-common-dot-so-dot-1-not-found-error-on-ubuntu-12-dot-04.html",
+      "date"     : {
+         "day"   : "21",
+         "month" : "January",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Basic Commands of Ubuntu",
+      "href"     : "/ubuntu/linux/2014/01/20/basic-commands-of-ubuntu.html",
+      "date"     : {
+         "day"   : "20",
+         "month" : "January",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Use of IEEE Conference LaTex Template with .bib File",
+      "href"     : "/latex/2014/01/20/use-of-ieee-conference-latex-template-with-bib-file.html",
+      "date"     : {
+         "day"   : "20",
+         "month" : "January",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Tips for the Use of Octopress",
+      "href"     : "/web_development/octopress/2014/01/20/tips-for-the-use-of-octopress.html",
+      "date"     : {
+         "day"   : "20",
+         "month" : "January",
+         "year"  : "2014"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "First Blog",
+      "href"     : "/web_development/2014/01/19/first-blog.html",
+      "date"     : {
+         "day"   : "19",
+         "month" : "January",
+         "year"  : "2014"
+      }
+    }
+    
+    
+]
