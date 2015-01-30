@@ -21,8 +21,8 @@ keywords: some, relevant, keywords, for, usage, in metatags
 disqus: rxdugit
 
 ##set this to enable google analytics
-#ga_id: UA-47255965-1
-#ga_domain: rdu.im
+ga_id: UA-47255965-1
+ga_domain: rdu.im
 
 ##Some commonly used links
 links:
