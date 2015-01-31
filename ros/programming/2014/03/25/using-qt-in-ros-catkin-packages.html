@@ -84,8 +84,7 @@
 
 <p>The example package includes the following files:</p>
 
-<p><code>
-++ rviz_gui_package
+<pre><code>++ rviz_gui_package
  ++ src
    +- rviz_gui.cpp
    +- rviz_gui.h
@@ -93,45 +92,44 @@
    +- main.cpp
  +- CMakeLists.txt
  +- package.xml
-</code></p>
+</code></pre>
 
 <p>To compile a QT executable widget, you need to add the following to your CMakeLists.txt:</p>
 
-<p>```
-find_package(Qt4 COMPONENTS QtCore QtGui REQUIRED)</p>
+<pre><code class="language-cmake">find_package(Qt4 COMPONENTS QtCore QtGui REQUIRED)
 
-<p>include(${QT_USE_FILE})
+include(${QT_USE_FILE})
 add_definitions(-DQT_NO_KEYWORDS)
-add_definitions(${QT_DEFINITIONS})</p>
+add_definitions(${QT_DEFINITIONS})
 
-<p>set(HEADER_FILES 
+set(HEADER_FILES 
   src/rviz_gui.h
   include/myviz.h
-)</p>
+)
 
-<p>set(SOURCE_FILES
+set(SOURCE_FILES
   src/rviz_gui.cpp
   src/main.cpp
   ${MOC_FILES}
-)</p>
+)
 
-<p>set(FORM_FILES 
+set(FORM_FILES 
   src/rviz_gui.ui
-)</p>
+)
 
-<p>QT4_WRAP_CPP(MOC_SRC_H
+QT4_WRAP_CPP(MOC_SRC_H
   ${HEADER_FILES}
-)</p>
+)
 
-<p>QT4_WRAP_UI(MOC_GUI_H 
+QT4_WRAP_UI(MOC_GUI_H 
   ${FORM_FILES}
-)</p>
+)
 
-<p>include_directories(${CMAKE_CURRENT_BINARY_DIR})</p>
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-<p>add_executable(rviz_gui ${SOURCE_FILES} ${MOC_SRC_H} ${MOC_GUI_H})
+add_executable(rviz_gui ${SOURCE_FILES} ${MOC_SRC_H} ${MOC_GUI_H})
 target_link_libraries(rviz_gui ${QT_LIBRARIES} ${catkin_LIBRARIES})
-```</p>
+</code></pre>
 
 <p>To understand why you should do this, you need to understand the QT build system. For detailed illustration, read this <a href="http://qt-project.org/quarterly/view/using_cmake_to_build_qt_projects">Document</a> from qt-project.org. <strong>The image shown below is also from this document</strong>. I include it here just for convinence of reference.</p>
 

@@ -82,29 +82,29 @@
 
 <!-- more -->
 
-<ol>
+<ul>
   <li>First download STM32F10x_StdPeriph_Lib_V3.5.0 from the website of ST. Extract the archive file and you will get a folder which includes: <em>_htmresc</em>, <em>Libraries</em>, <em>Project</em> and <em>Utilities</em> folders. </li>
   <li>Start emIDE and create a new project. Choose a directory to save the project and select the device you are using during the creating process. By default, you will get 3 folders in the project: <em>Doc</em>, <em>Setup</em> and <em>Src</em>. Setup folder includes a linker script and a startup code for the MCU. You can add your own code into Src folder.</li>
   <li>Copy <em>Libraries</em> folder (from step 1) into the project directory. Copy <em>main.c</em>, <em>stm32fx_conf.h</em>, <em>stm32f10x_it.c</em>, <em>stm32f10x_it.h</em> from <em>Project\STM32F10x_StdPeriph_Template</em> (from step 1) to <em>Src</em> folder. Do not copy system_stm32f10x.c to Src, otherwise you will get multiple definition error during compilation. Add all files mentioned above including files in <em>Libraries</em> folder into your project in emIDE. Then remove <em>startup</em> folder (Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup)  from the project since emIDE has already provided a linker script and startup code in <em>Setup</em> folder. The structure of the project will look like the following screenshot.</li>
-</ol>
+</ul>
 
 <p><img src="/img/posts/emide_1.png" width="400" /></p>
 
-<ol>
+<ul>
   <li>In “Build Options” of the project, under Compiler <em>settings/#defines tab</em>, add two macros: STM32F10X_MD, USE_STDPERIPH_DRIVER. The first one specifies the MCU family you are using and the second one tells the compiler you will use standard library in the project.</li>
-</ol>
+</ul>
 
 <p><img src="/img/posts/emide_2.png" width="600" /></p>
 
-<ol>
+<ul>
   <li>Add Search directories so that the compiler can find all header files of the library.</li>
-</ol>
+</ul>
 
 <p><img src="/img/posts/emide_3.png" width="600" /></p>
 
-<ol>
+<ul>
   <li>In Properties of the project, make sure your JLink works under the right mode.</li>
-</ol>
+</ul>
 
 <p><img src="/img/posts/emide_4.png" width="600" /></p>
 

@@ -87,19 +87,19 @@ Something's wrong--perhaps a missing \item. \end{thebibliography}
 <p><!-- more -->
 I googled this issue and tried different solutions. Finally I figured it out how to fix this error (thanks to Velin’s help). The following are the steps to make a successful compilation.</p>
 
-<ol>
+<ul>
   <li>Download both  <em>LaTeX Archive Contents</em> and <em>LaTeX (Bibliography Files)</em></li>
   <li>Extract both packages to the same folder</li>
   <li>Uncomment the line: </li>
-</ol>
+</ul>
 
 <p><code>
 \usepackage{cite}
 </code></p>
 
-<ol>
+<ul>
   <li>Uncomment the lines:</li>
-</ol>
+</ul>
 
 <p><code>
 \bibliographystyle{IEEEtran}
@@ -112,9 +112,9 @@ I googled this issue and tried different solutions. Finally I figured it out how
 \bibliography{IEEEexample}
 </code></p>
 
-<ol>
+<ul>
   <li>Comment the lines:</li>
-</ol>
+</ul>
 
 <p><code>
 \begin{thebibliography}{1}
@@ -124,9 +124,9 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 \end{thebibliography}
 </code></p>
 
-<ol>
+<ul>
   <li>Cite at least one item in the paper. For example, add </li>
-</ol>
+</ul>
 
 <p><code>
 \cite{IEEEexample:article_typical} 
@@ -134,9 +134,9 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 
 <p>at the end of the acknowledgement section.</p>
 
-<ol>
+<ul>
   <li>Compile the tex file and you should get no error.</li>
-</ol>
+</ul>
 
 <p><em>PS</em>: If you have got the error before you try the steps stated above, you should clean the files generated from the unsuccessfuly compilation. Otherwise you will get the same error even if you have made all modifications.</p>
 

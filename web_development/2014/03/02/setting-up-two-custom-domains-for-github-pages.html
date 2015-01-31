@@ -88,28 +88,35 @@
 
 <p>In this example, I use domainA(“rdu.im” from name.com) as the main method to access my github pages and use domainB(“rxdu.me” from namecheap) to do the redirection.</p>
 
-<ol>
+<ul>
   <li>
     <p>Add a CNAME file, which includes your primary domain name, to your github page repository </p>
   </li>
   <li>
     <p>On namecheap:
 From the “Host Management” section on the left side, go to “All Host Records”. Add just one record:</p>
-  </li>
-</ol>
 
-<p>HOST NAME: @; IP ADDRESS/URL:http://rxdu.github.io; RECORD TYPE:redirect; TTL:1800</p>
+    <ul>
+      <li>HOST NAME: @; </li>
+      <li>IP ADDRESS/URL:http://rxdu.github.io; </li>
+      <li>RECORD TYPE:redirect; TTL:1800</li>
+    </ul>
+  </li>
+</ul>
 
 <p><img src="/img/posts/namecheap_config.png" width="850" /></p>
 
-<ol>
-  <li>On name.com:
-Go to DNS Record and add two records:</li>
-</ol>
+<ul>
+  <li>
+    <p>On name.com:
+Go to DNS Record and add two records:</p>
 
-<p>Type:A; Host:rdu.im; Answer:192.30.252.153; TTL:1800</p>
-
-<p>Type:A; Host:rdu.im; Answer:192.30.252.154; TTL:1800</p>
+    <ul>
+      <li>Type:A; Host:rdu.im; Answer:192.30.252.153; TTL:1800
+  -Type:A; Host:rdu.im; Answer:192.30.252.154; TTL:1800</li>
+    </ul>
+  </li>
+</ul>
 
 <p><img src="/img/posts/namecom_config.png" width="850" /></p>
 
