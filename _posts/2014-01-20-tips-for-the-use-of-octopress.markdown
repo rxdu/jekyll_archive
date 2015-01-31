@@ -56,26 +56,37 @@ In the past two days, I transferred my blog from several other places to Github 
 
 ####Basic Commands:
 Create a new blog post:
+
 ```
 rake new_post["title"]
 ```
+
 Create a new page:
+
 ```
 rake new_page["title"]
 ```
+
 Generate blog:
+
 ```
 rake generate
 ```
+
 Preview blog:
+
 ```
 rake preview
 ```
+
 Deploy blog to remote github repository (_master branch_)
+
 ```
 rake deploy
 ```
+
 Push source folder to remote github repository (_source branch_)
+
 ```
 git add .
 git commit -m 'your message'

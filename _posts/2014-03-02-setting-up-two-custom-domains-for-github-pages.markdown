@@ -16,21 +16,22 @@ My personal feeling is that namecheap provides better user experience in managin
 
 In this example, I use domainA("rdu.im" from name.com) as the main method to access my github pages and use domainB("rxdu.me" from namecheap) to do the redirection.
 
-1. Add a CNAME file, which includes your primary domain name, to your github page repository 
+* Add a CNAME file, which includes your primary domain name, to your github page repository 
 
-2. On namecheap:
+* On namecheap:
 From the "Host Management" section on the left side, go to "All Host Records". Add just one record:
 
-HOST NAME: @; IP ADDRESS/URL:http://rxdu.github.io; RECORD TYPE:redirect; TTL:1800
+	- HOST NAME: @; 
+	- IP ADDRESS/URL:http://rxdu.github.io; 
+	- RECORD TYPE:redirect; TTL:1800
 
 <img src="/img/posts/namecheap_config.png" width="850" />
 
-3. On name.com:
+* On name.com:
 Go to DNS Record and add two records:
 
-Type:A; Host:rdu.im; Answer:192.30.252.153; TTL:1800
-
-Type:A; Host:rdu.im; Answer:192.30.252.154; TTL:1800
+	- Type:A; Host:rdu.im; Answer:192.30.252.153; TTL:1800
+	-Type:A; Host:rdu.im; Answer:192.30.252.154; TTL:1800
 
 <img src="/img/posts/namecom_config.png" width="850" />
 

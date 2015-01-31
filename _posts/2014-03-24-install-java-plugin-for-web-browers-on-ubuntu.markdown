@@ -37,6 +37,7 @@ sudo ln -s /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libnpjp2.so
 **Note**:
 
 If you don't want to install JRE in the way mentioned above, make sure you give the right path for the command:
+
 ``` 
 sudo ln -s /<right-path-of-libnpjp2-so>/libnpjp2.so
 ```

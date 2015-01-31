@@ -15,15 +15,15 @@ Something's wrong--perhaps a missing \item. \end{thebibliography}
  <!-- more -->
 I googled this issue and tried different solutions. Finally I figured it out how to fix this error (thanks to Velin's help). The following are the steps to make a successful compilation.
 
-1. Download both  *LaTeX Archive Contents* and *LaTeX (Bibliography Files)*
-2. Extract both packages to the same folder
-3. Uncomment the line: 
+* Download both  *LaTeX Archive Contents* and *LaTeX (Bibliography Files)*
+* Extract both packages to the same folder
+* Uncomment the line: 
 
 ```
 \usepackage{cite}
 ```
 
-4. Uncomment the lines:
+* Uncomment the lines:
 
 ```
 \bibliographystyle{IEEEtran}
@@ -36,7 +36,7 @@ specify the name and location of your .bib file. For example, change the second 
 \bibliography{IEEEexample}
 ```
 
-5. Comment the lines:
+* Comment the lines:
 
 ```
 \begin{thebibliography}{1}
@@ -46,7 +46,7 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 \end{thebibliography}
 ```
 
-6. Cite at least one item in the paper. For example, add 
+* Cite at least one item in the paper. For example, add 
 
 ```
 \cite{IEEEexample:article_typical} 
@@ -54,7 +54,7 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 
 at the end of the acknowledgement section.
 
-7. Compile the tex file and you should get no error.
+* Compile the tex file and you should get no error.
 
 *PS*: If you have got the error before you try the steps stated above, you should clean the files generated from the unsuccessfuly compilation. Otherwise you will get the same error even if you have made all modifications.
 

@@ -12,7 +12,7 @@ Rviz plugins are basically QT widgets. CMakeLists.txt of the ROS package using Q
 
 The example package includes the following files:
 
-```
+~~~
 ++ rviz_gui_package
  ++ src
    +- rviz_gui.cpp
@@ -21,11 +21,12 @@ The example package includes the following files:
    +- main.cpp
  +- CMakeLists.txt
  +- package.xml
-```
+~~~
 
 To compile a QT executable widget, you need to add the following to your CMakeLists.txt:
 
-```
+
+~~~cmake
 find_package(Qt4 COMPONENTS QtCore QtGui REQUIRED)
 
 include(${QT_USE_FILE})
@@ -59,7 +60,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(rviz_gui ${SOURCE_FILES} ${MOC_SRC_H} ${MOC_GUI_H})
 target_link_libraries(rviz_gui ${QT_LIBRARIES} ${catkin_LIBRARIES})
-```
+~~~
 
 To understand why you should do this, you need to understand the QT build system. For detailed illustration, read this [Document](http://qt-project.org/quarterly/view/using_cmake_to_build_qt_projects) from qt-project.org. **The image shown below is also from this document**. I include it here just for convinence of reference.
  
