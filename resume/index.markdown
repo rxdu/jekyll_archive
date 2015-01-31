@@ -28,7 +28,7 @@ layout: page
 * **Programming**: C/C++, Robot Operating System (ROS), OpenCV, PCL, wxWidgets, Qt
 * **Microcontroller**: Freescale S12/S12X, AVR, STM32F, ARM7
 
-I'm familiar with development in both Windows and Linux. A lot of my project development work is done in Ubuntu with C++ and ROS. I'm comfortable with using open-source tools to do embedded development, such as Eclipse and GNU Toolschains. I use Git a lot to manage both my personal projects and projects collaborating with others. 
+I'm familiar with development in both Windows and Linux. A lot of my project development work is done in Ubuntu with C++ and ROS. I'm comfortable with using open-source tools to do embedded development, such as Eclipse and GNU Toolchains. I use Git a lot to manage both my personal projects and lab projects collaborating with others. 
 
 <a name="RATA"></a>
 
