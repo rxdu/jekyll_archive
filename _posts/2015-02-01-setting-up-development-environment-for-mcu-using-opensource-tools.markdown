@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Setting Up Development Environment for MCUs with Open-Source Tools"
+title: "Setting Up Development Environment for MCUs with Open-Source Tools (1)"
 date: 2015-02-01
 comments: true
 categories: [Embedded_Development]
@@ -22,8 +22,9 @@ As shown in Figure 1, you have a few source files and header files(labeled in ye
 * With the description of linker script, the linker(ld) will link all object files into an executable file. This file can be used for debugging. But it's not ready yet to be burnt into the flash of your MCU.
 * Finally a tool(objcopy) will convert the executable file into a binary file which can be understood and executed by the microcontroller.
 
-After finishing the above steps, you've got the file you want for the MCU. Then you will need to use a tool to write it to the flash of the MCU. For the STM32F4 Discovery board, you can use the onboard stlink. For other Cortex-M based MCUs, you can also use tools like Jlink, ARM-USB-OCD to do the same thing. They are all based on JTAG interface. You need to use the hardware(stlink) and software(st-flash) together to do this work. For AVRs, you can use avrdude on the software side and use a USB cable to transfer the file to the MCU, given that you've got a proper bootloader loaded in the MCU already. If you're trying to use a more advanced IDE and program your Arduino like a normal AVR microcontroller, you will not need to worry about the bootloader because they should have been set up for you when you bought the Arduino board.
+After finishing the above steps, you've got the file you want for the MCU. Then you will need to use a tool to write it to the flash of the MCU. For the STM32F4 Discovery board, you can use the onboard stlink. For other Cortex-M based MCUs, you can also use tools like Jlink, ARM-USB-OCD to do the same thing. They are all based on JTAG interface. Both hardware(stlink) and software(st-flash) are necessary to do this work. For AVRs, you can use avrdude on the software side and use a USB cable to transfer the file to the MCU, given that you've got a proper bootloader loaded in the MCU already. If you're trying to use a more advanced IDE rather than the Arduino IDE and want to program your Arduino like a normal AVR microcontroller, you will not need to worry about the bootloader because it should have been set up for you when you bought the Arduino board.
 
-**TO BE CONTINUED**
+So far you should have got an idea what tools you need and what to do with these tools. I will introduce how to make them work in detail in part two of this article.
 
-[GCC Submodel Options](https://gcc.gnu.org/onlinedocs/gcc/Submodel-Options.html#Submodel-Options)
+[Setting Up Development Environment for MCUs with Open-Source Tools (2)]({% post_url /2015-02-01-setting-up-development-environment-for-mcu-using-opensource-tools-2 %})
+
