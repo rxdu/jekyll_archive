@@ -1,8 +1,19 @@
 [
     
     {
-      "title"    : "Setting Up Development Environment for MCUs with Open-Source Tools",
-      "href"     : "/embedded_development/2015/02/01/setting-up-development-environment-for-mcu-using-opensource-tools.html",
+      "title"    : "Setting Up Development Environment for MCUs with Open-Source Tools (2)",
+      "href"     : "/embedded_development/2015/02/01/setting-up-development-environment-for-mcu-using-opensource-tools-2.html",
+      "date"     : {
+         "day"   : "01",
+         "month" : "February",
+         "year"  : "2015"
+      }
+    }
+    ,
+    
+    {
+      "title"    : "Setting Up Development Environment for MCUs with Open-Source Tools (1)",
+      "href"     : "/embedded_development/2015/02/01/setting-up-development-environment-for-mcu-using-opensource-tools-1.html",
       "date"     : {
          "day"   : "01",
          "month" : "February",
