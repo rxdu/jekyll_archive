@@ -6,16 +6,16 @@ markdown: kramdown
 highlighter: rouge
 
 ##define base_url for valid usage in sitemap.xml and robots.txt
-#base_url: http://gituser.github.io (or http://example.com)
+base_url: http://rdu.im
 sass:
   sass_dir: _sass
   style: :compressed
 paginate: 5
 paginate_path: "tech_notes/page:num"
 ##The website description (to be used in meta tags)
-description: Put website description for your home page. (about 50 words or more)
+description: This is the personal website of Ruixiang Du. This site includes a basic profile of Ruixiang and introductions to his study/research. The site also serves as a personal knowledge base, including technical notes and a wiki. It's aimed at providing convenience of access to knowledge/experience collections for Ruixiang, as well as sharing such information ot others on the Internet.
 ##Some frequently used keywords on your website
-keywords: some, relevant, keywords, for, usage, in metatags
+keywords: robotics, embedded, open-source, control, navigation, mobile robot, quadcopter
 
 ##define this for disqus comment support
 disqus: rxdugit
