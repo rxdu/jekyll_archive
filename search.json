@@ -1,6 +1,17 @@
 [
     
     {
+      "title"    : "Setting Up Development Environment for MCUs with Open-Source Tools",
+      "href"     : "/embedded_development/2015/02/01/setting-up-development-environment-for-mcu-using-opensource-tools.html",
+      "date"     : {
+         "day"   : "01",
+         "month" : "February",
+         "year"  : "2015"
+      }
+    }
+    ,
+    
+    {
       "title"    : "Site Migrated from Octopress to Jekyll",
       "href"     : "/web_development/2015/01/27/site-migrated-from-octopress-to-jekyll.html",
       "date"     : {

@@ -3,33 +3,33 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Software Upgrade for Turtlebot | Ruixiang Du</title>
+        <title>Setting Up Development Environment for MCUs with Open-Source Tools | Ruixiang Du</title>
         
           <meta name="author" content="rxdu">
         
-        <meta name="title" content="Software Upgrade for Turtlebot" >
+        <meta name="title" content="Setting Up Development Environment for MCUs with Open-Source Tools" >
         <link rel="icon" type="image/png" href="/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
 	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter" />
 
 
-  <meta name="description" content="This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki. 
+  <meta name="description" content="A lot of articles can be found from the Internet talking about this topic. It looks as if you can easily set up the development environment for MCUs by following these instructions. That can be true if you really understand how everything works inside the process of cross-compiling. If not, you probably will get some problems. The main issue, which makes most of the online articles to be not helpful enough, is that most of the authors just give instructions that are specific to a set of tools with specific versions, not telling you why you need to do each step. Very often you find doing the same thing just doesn’t work on your computer, because you’re using a different version, or working on a different operating system. You have to Google a lot to find every missing piece to get your tool chain fit and complete.
 
 ">
-  <meta property="og:description" content="This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki. 
+  <meta property="og:description" content="A lot of articles can be found from the Internet talking about this topic. It looks as if you can easily set up the development environment for MCUs by following these instructions. That can be true if you really understand how everything works inside the process of cross-compiling. If not, you probably will get some problems. The main issue, which makes most of the online articles to be not helpful enough, is that most of the authors just give instructions that are specific to a set of tools with specific versions, not telling you why you need to do each step. Very often you find doing the same thing just doesn’t work on your computer, because you’re using a different version, or working on a different operating system. You have to Google a lot to find every missing piece to get your tool chain fit and complete.
 
 " />
-  <meta name="twitter:description" content="This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki. 
+  <meta name="twitter:description" content="A lot of articles can be found from the Internet talking about this topic. It looks as if you can easily set up the development environment for MCUs by following these instructions. That can be true if you really understand how everything works inside the process of cross-compiling. If not, you probably will get some problems. The main issue, which makes most of the online articles to be not helpful enough, is that most of the authors just give instructions that are specific to a set of tools with specific versions, not telling you why you need to do each step. Very often you find doing the same thing just doesn’t work on your computer, because you’re using a different version, or working on a different operating system. You have to Google a lot to find every missing piece to get your tool chain fit and complete.
 
 " />
 
-<meta property="og:title" content="Software Upgrade for Turtlebot" />
+<meta property="og:title" content="Setting Up Development Environment for MCUs with Open-Source Tools" />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="/sharer.png" />
-<meta property="og:url" content="/ros/turtlebot/2014/01/21/software-upgrade-for-turtlebot.html" />
+<meta property="og:url" content="/embedded_development/2015/02/01/setting-up-development-environment-for-mcu-using-opensource-tools.html" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Software Upgrade for Turtlebot" />
+<meta name="twitter:title" content="Setting Up Development Environment for MCUs with Open-Source Tools" />
 <meta name="twitter:image" content="/sharer.png" />
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/style.css">
@@ -68,9 +68,9 @@
 <div class="unit whole">
 <article>
 	<header>
-		<h1>Software Upgrade for Turtlebot</h1>
+		<h1>Setting Up Development Environment for MCUs with Open-Source Tools</h1>
 		<p class="meta">
-			<time class="timeago postlist-meta" datetime="2014-01-21">January 21, 2014</time>
+			<time class="timeago postlist-meta" datetime="2015-02-01">February 1, 2015</time>
 			<!-- <a class="button blue share" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;">Share on fb</a>
 			
 				<a class="button blue share" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;">Share on twitter</a>
@@ -78,60 +78,29 @@
 		</p>
 	</header>
 	<section>
-		<p>This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki. </p>
+		<p>A lot of articles can be found from the Internet talking about this topic. It looks as if you can easily set up the development environment for MCUs by following these instructions. That can be true if you really understand how everything works inside the process of cross-compiling. If not, you probably will get some problems. The main issue, which makes most of the online articles to be not helpful enough, is that most of the authors just give instructions that are specific to a set of tools with specific versions, not telling you why you need to do each step. Very often you find doing the same thing just doesn’t work on your computer, because you’re using a different version, or working on a different operating system. You have to Google a lot to find every missing piece to get your tool chain fit and complete.</p>
 
-<!-- more -->
+<p>This situation happened to me when I first tried to set up open-source environment for the development of STM32F4 Discovery board. Before that I had been using IDEs like Codewarrior, AVR-Studio, MDK-ARM and IAR for development of MCUs. These IDEs are convenient and take care of a lot of configuration work for you. But it also means these IDEs hide a lot of details about how tools like compilers and linkers work internally. However, with open-source tools, you have to understand the workflow and figure out how to put all the tools together and get them work properly. If you understand this first, you will find reading the articles I mentioned above becomes more helpful. You will not have to follow them step by step without a clue why you’re doing that. Instead you’re learning tricks or experience gained for that type of MCU using tool set like GNU toolchain, which are the true values of these articles.</p>
 
-<p>The ROS wiki page <a href="http://wiki.ros.org/Robots/TurtleBot/Robot%20Setup">Robots/TurtleBot/Robot Setup</a> is a good reference but it is not always up to date. It uses the system image provided by willow garage, which has integrated most packages required to run turtlebot. What you mainly need to do are just installing Ubuntu with the modified image and then making some small updates. But it’s not easy to find sufficient information about that image to make sure it’s exactly what you want and it’s fully compatible with your netbook. So this tutorial presents how to install the necessary components separately. </p>
+<p>Since I’m talking about this topic myself now, I would like to introduce the workflow of the environment configuration first. I use development of Cortex-M microcontrollers as an example. But you will find the idea is very similiar with the development of other 8-bit, 16-bit microcontrollers.</p>
 
-<p><strong>Install Ubuntu</strong></p>
+<center><img src="/img/posts/gnu_toolchain.jpg" width="750" /></center>
+<center>Figure 1 Workflow of Cortex-M MCU Development</center>
 
-<p>You can download the iso image of Ubuntu 12.04 from its <a href="http://www.ubuntu.com/download">official website</a>. Then burn the image to a flash drive or CD to make a bootable media. The installation steps are very straightforward and you mainly need to make some easy choices and click “next”. If necessary, you can have a look at this page <a href="http://www.ubuntu.com/download/desktop/install-desktop-long-term-support">Install Ubuntu 12.04.2 LTS</a>.</p>
+<p>As shown in Figure 1, you have a few source files and header files(labeled in yellow on the left) in your hand. Usually people start with a blinking LED program, the “Hello World” for the embedded world. To make the code run on the microcontroller, you will also need startup code and a linker script. I will talk about how to get these two files in detail later. Now just assume you’ve already got these two. Then the four types of files are the input to your toolset. What you want to get is a binary file that can be burnt to and run on your microcontroller, which is labeled in blue in the figure. Getting these files, what your tools will need to do for you:</p>
 
-<p><strong>Configure Wireless Network of the Netbook</strong></p>
+<ul>
+  <li>C compiler(gcc) compiles source files and header files into assembly files</li>
+  <li>Together with the startup file, which is usually written in assembly language, all the assembly files will be passed to the assembler(as) and generated to be object files.</li>
+  <li>With the description of linker script, the linker(ld) will link all object files into an executable file. This file can be used for debugging. But it’s not ready yet to be burnt into the flash of your MCU.</li>
+  <li>Finally a tool(objcopy) will convert the executable file into a binary file which can be understood and executed by the microcontroller.</li>
+</ul>
 
-<p>Now you have a netbook running Ubuntu. To complete the following steps, you need to make the netbook to have access to the Internet. To connect to WPI network (either wireless or wired), you need to get your computer registered and install required certificate files. Definitely it’s more convenient to use the wireless network since the robot needs to move around. You can follow this WPI web page to complete the configuration: <a href="http://www.wpi.edu/Academics/CCC/Netops/Wireless/Setup/Linux.html">link</a>.</p>
+<p>After finishing the above steps, you’ve got the file you want for the MCU. Then you will need to use a tool to write it to the flash of the MCU. For the STM32F4 Discovery board, you can use the onboard stlink. For other Cortex-M based MCUs, you can also use tools like Jlink, ARM-USB-OCD to do the same thing. They are all based on JTAG interface. You need to use the hardware(stlink) and software(st-flash) together to do this work. For AVRs, you can use avrdude on the software side and use a USB cable to transfer the file to the MCU, given that you’ve got a proper bootloader loaded in the MCU already. If you’re trying to use a more advanced IDE and program your Arduino like a normal AVR microcontroller, you will not need to worry about the bootloader because they should have been set up for you when you bought the Arduino board.</p>
 
-<p><strong>Install ROS</strong></p>
+<p><strong>TO BE CONTINUED</strong></p>
 
-<p>Follow this wiki page <a href="http://www.ros.org/wiki/groovy/Installation/Ubuntu">groovy/Installation/Ubuntu</a> to finish the installation of ROS groovy. It should be easy to find the latest installation instruction if the link for the old one is invalid.</p>
-
-<p><strong>Install Turtlebot Packages</strong></p>
-
-<p>This <a href="http://ros.org/wiki/Robots/TurtleBot">Robots/Turtlebot</a> page provides well written documents of ROS packages for turtlebot. First follow <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Installation">Installation</a> step by step. The easiest way should be “Install from Debs”. On the <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Post-Installation%20Setup">Post-Installation Setup</a> page, you first need to install chrony for clock synchronization. Don’t forget to check the section ‘'’Special Cases’’’. Probably you need to take care of <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Create%20Base">Create Base</a> and <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Netbook%20Battery%20Setup">Netbook Battery Setup</a>. Be careful that the Netbook Battery Setup instruction is not up to date at the time this wiki is written. The robot cannot find battery information of the netbook from “/proc/acpi/battery/BAT1”. Instead, use “/sys/class/power_supply/BAT1” and the command changes to:</p>
-
-<p><code>
- $export TURTLEBOT_BATTERY=/proc/acpi/battery/BAT1
-</code></p>
-
-<p>Follow <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Workstation%20Installation">Workstation Installation</a> and <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Network%20Configuration">Network Configuration</a> to make sure your robot can communicate with the work station successfully.</p>
-
-<p><strong>More Configurations</strong></p>
-
-<p>Now you can step to the next section of [http://ros.org/wiki/Robots/TurtleBot Robots/Turtlebot]. Work is still not done. When following the <a href="http://ros.org/wiki/turtlebot_bringup/Tutorials/groovy/TurtleBot%20Bringup">turtlebot_bringup/Tutorials/groovy/TurtleBot Bringup</a>, probably you will get errors when you try to execute roslaunch command:</p>
-
-<p><code>
-$roslaunch turtlebot_bringup minimal.launch
-</code></p>
-
-<p>If you get a error message like this:</p>
-
-<p><code>
-Failed to open port /dev/ttyUSB0.  Please make sure the Create cable is plugged into the computer.
-</code></p>
-
-<p>It’s because you don’t have the necessary access permission to the ttyUSB0 device. The solution is to add the user account you’re using to the “dialout” group.</p>
-
-<p><code>
- $sudo adduser second_user dialout
-</code></p>
-
-<p>Now you should be able to successfully roslaunch the above launch file. After starting minimal.launch and then turtlebot_dashboard.launch, you should get information of the robot from the dashboard.</p>
-
-<p><strong>Conclusion</strong></p>
-
-<p>If you have managed to get through all steps stated above, you’re all set for the upgrade. Actually, the above instruction should still be helpful when you’re trying to upgrade the software to a newer version in the future. Basically the ideas should stay the same. Just make sure you have the right combination of Ubuntu version and ROS version. You also need to check all relevant packages for the turtlebot and your project have got support to the version of ROS you’re trying to use.</p>
-
+<p><a href="https://gcc.gnu.org/onlinedocs/gcc/Submodel-Options.html#Submodel-Options">GCC Submodel Options</a></p>
 
 	</section>
 	
