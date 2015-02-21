@@ -5,7 +5,7 @@ title: research
 
 ## Research of Interests
 
-At present, most robots which are designed to work around people usually run very slowly. An important reason for this is that we want to always keep safe and try to avoid collision between a robot and its environment. My research interest is to make a mobile robot more reactive to obstacles and make safe movements while not losing agileness in a cluttered environment with possible dynamic objects. 
+My research interest is to study the control and motion planning of a mobile robot to make it more reactive to obstacles and capable of making safe movements while not losing agileness in cluttered and dynamic environments. 
 
 ## Publications
 
