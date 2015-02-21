@@ -3,7 +3,7 @@ layout: page
 title: research
 ---
 
-## Research of Interests
+## Research Interests
 
 My research interest is to study the control and motion planning of a mobile robot to make it more reactive to obstacles and capable of making safe movements while not losing agileness in cluttered and dynamic environments. 
 
