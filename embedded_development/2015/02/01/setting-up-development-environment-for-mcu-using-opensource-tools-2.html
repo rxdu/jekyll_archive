@@ -14,13 +14,13 @@
 	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter" />
 
 
-  <meta name="description" content="As introduced in part one, you should have source files, startup code and a linker script at hand first, then compile, assemble, link them to get an executable file, and finally convert the executable file to a binary file that your MCU can understand. In this part, I will explain how to do all these work in detail. I keep figure 1 from the first part of this article for easy reference. 
+  <meta name="description" content="As introduced in part one, you should have source files, startup code and a linker script at hand first, then compile, assemble, link them to get an executable file, and finally convert the executable file to a binary file that your MCU can understand. In this part, I will explain how to do all these work in detail. I keep figure 1 from the first part of this article for easy reference.
 
 ">
-  <meta property="og:description" content="As introduced in part one, you should have source files, startup code and a linker script at hand first, then compile, assemble, link them to get an executable file, and finally convert the executable file to a binary file that your MCU can understand. In this part, I will explain how to do all these work in detail. I keep figure 1 from the first part of this article for easy reference. 
+  <meta property="og:description" content="As introduced in part one, you should have source files, startup code and a linker script at hand first, then compile, assemble, link them to get an executable file, and finally convert the executable file to a binary file that your MCU can understand. In this part, I will explain how to do all these work in detail. I keep figure 1 from the first part of this article for easy reference.
 
 " />
-  <meta name="twitter:description" content="As introduced in part one, you should have source files, startup code and a linker script at hand first, then compile, assemble, link them to get an executable file, and finally convert the executable file to a binary file that your MCU can understand. In this part, I will explain how to do all these work in detail. I keep figure 1 from the first part of this article for easy reference. 
+  <meta name="twitter:description" content="As introduced in part one, you should have source files, startup code and a linker script at hand first, then compile, assemble, link them to get an executable file, and finally convert the executable file to a binary file that your MCU can understand. In this part, I will explain how to do all these work in detail. I keep figure 1 from the first part of this article for easy reference.
 
 " />
 
@@ -78,7 +78,7 @@
 		</p>
 	</header>
 	<section>
-		<p>As introduced in part one, you should have source files, startup code and a linker script at hand first, then compile, assemble, link them to get an executable file, and finally convert the executable file to a binary file that your MCU can understand. In this part, I will explain how to do all these work in detail. I keep figure 1 from the first part of this article for easy reference. </p>
+		<p>As introduced in part one, you should have source files, startup code and a linker script at hand first, then compile, assemble, link them to get an executable file, and finally convert the executable file to a binary file that your MCU can understand. In this part, I will explain how to do all these work in detail. I keep figure 1 from the first part of this article for easy reference.</p>
 
 <center><img src="/img/posts/gnu_toolchain.jpg" width="750" /></center>
 <center>Figure 1 Workflow of Cortex-M MCU Development</center>
@@ -111,7 +111,7 @@
   <li>Launch Eclipse CDT and create a new C project</li>
 </ul>
 
-<p>Click “File”-“New”-“C Project”. Select an “Empty Project” under “Executable” tab, choose “Cross GCC” as the “Toolchains”. Give a name to your project. Click “Next” until you see the “Cross GCC Command” page, In “Cross compiler prefix” area, type “arm-none-eabi-“. If you’re not sure about the prefix, check the “bin” folder in your GNU tool installation directory. In “Cross compiler path”, browse to get the location of the “bin” folder of your GNU tool chain installation. Now you have a C project in Eclipse. You can copy your source file into the project. Before successfully compiling the project, you still need to do a few more configurations. </p>
+<p>Click “File”-“New”-“C Project”. Select an “Empty Project” under “Executable” tab, choose “Cross GCC” as the “Toolchains”. Give a name to your project. Click “Next” until you see the “Cross GCC Command” page, In “Cross compiler prefix” area, type “arm-none-eabi-“. If you’re not sure about the prefix, check the “bin” folder in your GNU tool installation directory. In “Cross compiler path”, browse to get the location of the “bin” folder of your GNU tool chain installation. Now you have a C project in Eclipse. You can copy your source file into the project. Before successfully compiling the project, you still need to do a few more configurations.</p>
 
 <center><img src="/img/posts/eclipse_gcc.png" width="650" /></center>
 <center>Figure 2 An Example "Cross GCC Command" Page Setup</center>
@@ -120,7 +120,7 @@
   <li>Configure project properties</li>
 </ul>
 
-<p>Right click on the project name and open “Properties”. Go to “C/C++ Build”-“Settings”. Most settings are done here. Configurations under “Tool Settings” tab are for the compiling, assembling and linking. To get the executable filecompiled, you need to get everything configured properly here. This part can be confusing if you have no idea about the GNU toolchain. One thing that’s worthy of mentioning is that “gcc” here doesn’t just mean the “C Compiler, instead it means the “<strong>G</strong>NU <strong>C</strong>ompiler <strong>C</strong>ollection”. This command “gcc” can also invoke the linker and assembler. For example if you just want to compile without assembling and linking, use “-S” option. Use “gcc –help” for information of all options. Read the “<a href="https://launchpadlibrarian.net/192227680/readme.txt">readme</a>” file for the most important options you need to specify when invoking gcc. Check the list of <a href="https://gcc.gnu.org/onlinedocs/gcc/Submodel-Options.html#Submodel-Options">GCC Submodel Options</a> for the available options for your MCU. Check this page <a href="https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#Link-Options">Link Options</a> for information about how to specify flags for linker. Probably you just need to use “-T” to use your linker script. </p>
+<p>Right click on the project name and open “Properties”. Go to “C/C++ Build”-“Settings”. Most settings are done here. Configurations under “Tool Settings” tab are for the compiling, assembling and linking. To get the executable filecompiled, you need to get everything configured properly here. This part can be confusing if you have no idea about the GNU toolchain. One thing that’s worthy of mentioning is that “gcc” here doesn’t just mean the “C Compiler, instead it means the “<strong>G</strong>NU <strong>C</strong>ompiler <strong>C</strong>ollection”. This command “gcc” can also invoke the linker and assembler. For example if you just want to compile without assembling and linking, use “-S” option. Use “gcc –help” for information of all options. Read the “<a href="https://launchpadlibrarian.net/192227680/readme.txt">readme</a>” file for the most important options you need to specify when invoking gcc. Check the list of <a href="https://gcc.gnu.org/onlinedocs/gcc/Submodel-Options.html#Submodel-Options">GCC Submodel Options</a> for the available options for your MCU. Check this page <a href="https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#Link-Options">Link Options</a> for information about how to specify flags for linker. Probably you just need to use “-T” to use your linker script.</p>
 
 <p>Under “Build Steps” tap, in “Post-build” area, you need to tell Eclipse to use objcopy to convert the executable file to a binary file. A common usage of “objcopy” is:</p>
 
@@ -136,7 +136,7 @@ objcopy -O &lt;output-format&gt; &lt;in-file&gt; &lt;out-file&gt;
 
 <p>You might still feel you need more details in the configurations. But I hope you’ve got the idea how everything works together now. One reason I don’t want to include all the details is that I know they will be out-dated soon. And it’s almost impossible to list all configuration, which need to be set for successful building, for all types of microcontrollers. Fortunately you can find a lot of articles which include such details. With what you’ve learned from this article, it’s possible for you to understand and adapt the examples you read from these articles to fulfill your own needs.</p>
 
-<p>As mentioned earlier, I will talk about how to get proper startup code and linker script for your Cortex-M microcontroller (if you don’t want to write one by yourself) in a separate post.  </p>
+<p>As mentioned earlier, I will talk about how to get proper startup code and linker script for your Cortex-M microcontroller (if you don’t want to write one by yourself) in a separate post.</p>
 
 
 	</section>
