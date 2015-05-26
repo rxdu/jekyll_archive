@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>C/C++ Logging Frameworks | Ruixiang Du</title>
+        
+          <meta name="author" content="rxdu">
+        
+        <meta name="title" content="C/C++ Logging Frameworks" >
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter" />
+
+
+  <meta name="description" content="My goal is to find a lightweight, high-performance logging library for use with C/C++, mostly for robotics control and navigation applications. Ref[1] lists a lot of available C/C++ Logging libraries:
+
+">
+  <meta property="og:description" content="My goal is to find a lightweight, high-performance logging library for use with C/C++, mostly for robotics control and navigation applications. Ref[1] lists a lot of available C/C++ Logging libraries:
+
+" />
+  <meta name="twitter:description" content="My goal is to find a lightweight, high-performance logging library for use with C/C++, mostly for robotics control and navigation applications. Ref[1] lists a lot of available C/C++ Logging libraries:
+
+" />
+
+<meta property="og:title" content="C/C++ Logging Frameworks" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/sharer.png" />
+<meta property="og:url" content="/c/c++/programming/2015/05/26/C-and-C-plus-plus-logging-libraries.html" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="C/C++ Logging Frameworks" />
+<meta name="twitter:image" content="/sharer.png" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/monokai.css">
+    </head>
+    <body class="wrap">
+      <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+
+<header>
+  <h1 class="site-title" style="font-family: 'Dancing Script', serif;"><a href="/">Ruixiang Du</a></h1> 
+  <!-- <h1 class="site-title"><a href="/">Ruixiang Du</a></h1> -->
+  <nav class="main-nav">
+    <a href="#" class="opener show-on-mobiles">...</a>
+    <div class="clear-opener show-on-mobiles"></div>
+    <div class="grid">
+      <ul>
+        <li><a href="/">Home</a></li>
+		<li><a href="/resume">Resume</a></li>
+		<li><a href="/research">Research</a></li>
+		<li><a href="/devel_zone">Devel Zone</a></li>
+		<li><a href="/tech_notes">Tech Notes</a></li>
+		<li><a href="http://wiki.rdu.im">Wiki</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+      <section class="content">
+        <div id="home" class="grid post">
+<div class="unit whole">
+<article>
+	<header>
+		<h1>C/C++ Logging Frameworks</h1>
+		<p class="meta">
+			<time class="timeago postlist-meta" datetime="2015-05-26">May 26, 2015</time>
+			<!-- <a class="button blue share" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;">Share on fb</a>
+			
+				<a class="button blue share" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;">Share on twitter</a>
+			 -->
+		</p>
+	</header>
+	<section>
+		<p>My goal is to find a lightweight, high-performance logging library for use with C/C++, mostly for robotics control and navigation applications. Ref[1] lists a lot of available C/C++ Logging libraries:</p>
+
+<ul>
+  <li><a href="http://www.boost.org/doc/libs/release/libs/log/">Boost::Log</a></li>
+  <li><a href="https://github.com/easylogging/easyloggingpp">EasyLogging++</a></li>
+  <li><a href="http://www.codeproject.com/Articles/288827/g-log-An-efficient-asynchronous-logger-using-Cplus">g2log</a></li>
+  <li><a href="https://github.com/KjellKod/g3log">g3log</a></li>
+  <li><a href="https://code.google.com/p/google-glog/">glog</a></li>
+  <li><a href="http://sourceforge.net/projects/log4cplus/">Log4cplus</a></li>
+  <li><a href="http://log4cpp.sourceforge.net/">Log4cpp</a></li>
+  <li><a href="http://logging.apache.org/log4cxx/">Log4cxx</a></li>
+  <li><a href="http://pantheios.sourceforge.net/">Pantheios</a></li>
+  <li><a href="https://github.com/gabime/spdlog/">spdlog</a></li>
+  <li><a href="https://github.com/mattiasflodin/reckless">reckless</a></li>
+  <li><a href="https://github.com/SergiusTheBest/plog">plog</a></li>
+</ul>
+
+<p>Boost::Log is well implemented and documented, but it’s relatively heavyweight. It also can be more difficult to be adapted for more customized applications, for example an application runs on embedded boards with limited hardware resources. So I rule this option out at the first place.</p>
+
+<p>For rest of the options, they are all free, open-source and lightweight. They can be grouped into two categories: synchronous and asynchronous.</p>
+
+<p><strong>Synchronous libraries</strong>:</p>
+
+<ul>
+  <li>EasyLogging++ (asynchronous mode is in experimental stages)</li>
+  <li>glog</li>
+  <li>Log4cplus</li>
+  <li>Log4cpp</li>
+  <li>Log4cxx</li>
+  <li>Pantheios (with default settings)</li>
+  <li>plog</li>
+</ul>
+
+<p><strong>Asynchronous libraries</strong>:</p>
+
+<ul>
+  <li>reckless</li>
+  <li>g2log</li>
+  <li>g3log</li>
+  <li>spdlog (support both)</li>
+</ul>
+
+<p>Asynchronous libraries use separate threads to handle logs so that it will not block the main application for a long time to wait for the logs written to the disk. Not counting the implementation qualities, asynchronous structure is more suitable for applications that emphasize performance and responsiveness.</p>
+
+<p>Another factor I consider is the activeness of the library development and maintenance. Log4cpp and Pantheios haven’t been updated for a few years. Potentially they may start introducing issues while compilers and OSs are evolving. Other projects seem to be still active.</p>
+
+<p>Combining the above two factors, it seems the four libraries in the asynchronous category are good candidates. And in their introductions, they all highlight performance, which is desirable.</p>
+
+<ol>
+  <li>
+    <p>reckless library is claimed to be self-contained without external dependency. However, it acquires this feature by including files from boost library.</p>
+  </li>
+  <li>
+    <p>g2log and g3log are two generations of the same library by the same author. According to the project introduction, g3log includes new features while g2log focuses on reliability and compiler supports. “Only well, time tested, features from g3log will make it into g2log.”[3]</p>
+  </li>
+  <li>
+    <p>spdlog emphasize speed, just as indicated by its name. I don’t see obvious issues in it and according to the benchmarks it provide, it can be even more efficient than g2log in terms of time needed to log 1,000,000 lines in asynchronous mode.</p>
+  </li>
+</ol>
+
+<p>In conclusion, g2log and spdlog seem to be the best two options for me to do logging. I will try and compare them in more details with actual code.</p>
+
+<p>[Reference]</p>
+
+<ol>
+  <li><a href="https://github.com/SergiusTheBest/plog">plog git</a></li>
+  <li><a href="https://sites.google.com/site/kjellhedstrom2//g2log-efficient-background-io-processign-with-c11#TOC_the_synchronous">g2log presentation</a></li>
+  <li><a href="https://github.com/KjellKod/g3log">g3log git</a></li>
+</ol>
+
+	</section>
+	
+	<footer>
+		<p><a href="#" id="showComments">Comments</a></p>
+		<div id="disqus_thread"></div>
+	</footer>
+	<script>
+		(function(w){
+			var hidden = true;
+			var disqus_shortname = '';
+			var cmtBtn = document.getElementById("showComments");
+			var dt = document.getElementById("disqus_thread");
+
+			cmtBtn.addEventListener("click", function(e){
+				e.preventDefault();
+				if(disqus_shortname === ''){
+					disqus_shortname = 'rxdugit';
+					dt.innerHTML = 'Loading comments...';
+					(function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+				}
+				if(hidden){
+					dt.setAttribute('style','display:block');
+					this.innerHTML = 'Hide Comments';
+				}else{
+					dt.setAttribute('style','display:none');
+					this.innerHTML = 'Comments';
+				}
+				hidden = !hidden;
+			});
+		})(window);
+	</script>
+	
+</article>
+</div>
+</div>
+
+      </section>
+      <footer class="grid site-footer">
+        <p> &copy;&nbsp; 2015 - Ruixiang Du -
+  <span class="credit">Powered by <a href="http://jekyllrb.com">Jekyll</a></span>
+      </footer>
+      
+        <script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-47255965-1', 'rdu.im');
+	ga('require', 'displayfeatures');
+	ga('send', 'pageview');
+</script>
+
+      
+      <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var hidden = true;
+        var menu = document.querySelector(".main-nav");
+        var opener = document.querySelector(".opener");
+        opener.addEventListener("click", function(e){
+          e.preventDefault();
+          if(hidden){
+            menu.setAttribute("class", "main-nav active-menu");
+          }else{
+            menu.setAttribute("class", "main-nav");
+          }
+          hidden = !hidden;
+        });
+      });
+      </script>
+      
+      <!-- Script for search -->
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+	
+	    function getSearchJSON()
+	    {
+	        $.getJSON("/search.json", function(e) {
+	            console.log("[search.json loaded for instant search]");
+	
+	            $("#search_results").html("");
+	
+	            searchJSON = e;
+	        });
+	    }
+	
+	    function doSearch(e)
+	    {
+	        results = [];
+	
+	        if (e != "")
+	        {
+	            $.each(searchJSON, function(t, n) {
+	                var r = n.title, i = n.title.toLowerCase(), s = n.href, o = n.date;
+	                i.indexOf(e)!==-1 && results.push([r, s, o])
+	            });
+	
+	            printResults();
+	        }
+	        else
+	        {
+	            $("#search_results").html();
+	            results = [];
+	            printResults();
+	        }
+	    }
+	
+	    function printResults()
+	    {
+	        var e = $("#search_results");
+	
+	        e.html("");
+	
+	        e.html(function() {
+	            if (results.length == 0)
+	            {
+					if ($('#search_input').val() != '')
+						e.append('<li style="padding-top: 3px; padding-bottom: 3px"><a style="color: #999; word-wrap: break-word; white-space: normal" href="#">No results found</a></li>');
+	            }
+	            else
+	            {
+	                $.each(results, function(t, n) {
+	                    e.append('<li style="padding-top: 3px; padding-bottom: 3px"><a style="color: #999; word-wrap: break-word; white-space: normal" href="' + n[1] + '">' + n[0] + '</a></li>');
+	                });
+	            }
+	        });
+	    }
+	
+	    // Show the dropdown menu as long as there are characters in the text field
+	    function checkTextField()
+	    {
+	        // If the value of id search_input is not empty show id search_results otherwise hide it
+	        if ($('#search_input').val() != '')
+	        {
+	            $('#search_results').show();
+	        }
+	        else
+	        {
+	            //$('#search_results').hide();
+	        }
+	    }
+	
+	    // Hide the dropdown menu if there is a left mouse click outside of it
+	    $(document).mouseup(function (e)
+	    {
+	        //var container = $("#search_results");
+	
+	        // if the target of the click isn't the
+	        // container nor a descendant of the container
+	        //if (!container.is(e.target) && container.has(e.target).length === 0)
+	        //{
+	        //    container.hide();
+	        //}
+	    });
+	
+	    $(document).ready(function() {
+	        // Create the search index on page load
+	        getSearchJSON();
+	
+	        // Continually update search results as characters are typed
+	        $("#search_input").keyup(function() {
+	            // Make search inputs are case insensitive
+	            var e = $(this).val().toLowerCase();
+	
+	            // Do the actual search
+	            doSearch(e);
+	        });
+	    });
+	
+	</script>
+    </body>
+</html>
