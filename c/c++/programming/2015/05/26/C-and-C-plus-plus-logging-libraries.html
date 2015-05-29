@@ -93,6 +93,7 @@
   <li><a href="https://github.com/gabime/spdlog/">spdlog</a></li>
   <li><a href="https://github.com/mattiasflodin/reckless">reckless</a></li>
   <li><a href="https://github.com/SergiusTheBest/plog">plog</a></li>
+  <li><a href="https://github.com/RafaGago/mini-async-log">mini-async-log</a></li>
 </ul>
 
 <p>Boost::Log is well implemented and documented, but it’s relatively heavyweight. It also can be more difficult to be adapted for more customized applications, for example an application runs on embedded boards with limited hardware resources. So I rule this option out at the first place.</p>
@@ -118,13 +119,12 @@
   <li>g2log</li>
   <li>g3log</li>
   <li>spdlog (support both)</li>
+  <li>mini-asyn-log</li>
 </ul>
 
 <p>Asynchronous libraries use separate threads to handle logs so that it will not block the main application for a long time to wait for the logs written to the disk. Not counting the implementation qualities, asynchronous structure is more suitable for applications that emphasize performance and responsiveness.</p>
 
 <p>Another factor I consider is the activeness of the library development and maintenance. Log4cpp and Pantheios haven’t been updated for a few years. Potentially they may start introducing issues while compilers and OSs are evolving. Other projects seem to be still active.</p>
-
-<p>Combining the above two factors, it seems the four libraries in the asynchronous category are good candidates. And in their introductions, they all highlight performance, which is desirable.</p>
 
 <ol>
   <li>
@@ -134,11 +134,11 @@
     <p>g2log and g3log are two generations of the same library by the same author. According to the project introduction, g3log includes new features while g2log focuses on reliability and compiler supports. “Only well, time tested, features from g3log will make it into g2log.”[3]</p>
   </li>
   <li>
-    <p>spdlog emphasize speed, just as indicated by its name. I don’t see obvious issues in it and according to the benchmarks it provide, it can be even more efficient than g2log in terms of time needed to log 1,000,000 lines in asynchronous mode.</p>
+    <p>spdlog emphasizes speed, just as indicated by its name. I don’t see obvious issues in it and according to the benchmarks it provide, it can be even more efficient than g2log in terms of time needed to log 1,000,000 lines in asynchronous mode.</p>
   </li>
 </ol>
 
-<p>In conclusion, g2log and spdlog seem to be the best two options for me to do logging. I will try and compare them in more details with actual code.</p>
+<p>–More comments will be added after actual use.–</p>
 
 <p>[Reference]</p>
 
