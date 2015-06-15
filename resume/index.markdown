@@ -11,7 +11,7 @@ layout: page
 
 <a name="EDUCATION"></a>
 
-## <span style="color: CadetBlue  ">EDUCATION</span> 
+## <span style="color: CadetBlue  ">EDUCATION</span>
 
 
 * **Worcester Polytechnic Institute (WPI), Worcester, MA USA**
@@ -22,13 +22,13 @@ layout: page
 
 <a name="SKILLS"></a>
 
-## <span style="color: CadetBlue ">TECHNICAL SKILLS</span> 
+## <span style="color: CadetBlue ">TECHNICAL SKILLS</span>
 
 * **Software**: Matlab, Eclipse, Git
 * **Programming**: C/C++, Robot Operating System (ROS), OpenCV, PCL, wxWidgets, Qt
 * **Microcontroller**: Freescale S12/S12X, AVR, STM32F, ARM7
 
-I'm familiar with development in both Windows and Linux. A lot of my project development work is done in Ubuntu with C++ and ROS. I'm comfortable with using open-source tools, such as Eclipse and GNU toolchains, to do embedded development. I use Git a lot to manage both my personal projects and projects collaborating with others in the lab. 
+I'm familiar with development in both Windows and Linux. A lot of my project development work is done in Ubuntu with C++ and ROS. I'm comfortable with using open-source tools, such as Eclipse and GNU toolchains, to do embedded development. I use Git a lot to manage both my personal projects and projects collaborating with others in the lab.
 
 <a name="RATA"></a>
 
@@ -36,7 +36,7 @@ I'm familiar with development in both Windows and Linux. A lot of my project dev
 
 * **Research Assistant**
 	- [RIVeR Lab](http://robot.wpi.edu/), Professor Taskin Padir , 10/2014-Present
-* **Teaching Assistant** 
+* **Teaching Assistant**
 	- ECE2010, Introduction to ECE, Professor William Michalson, 2014 Fall A term
 	- ECE549/RBE502, Robot Control, Professor Taskin Padir, 2014 Spring
 	- ECE3503, Power Electronics, Professor Alexander E. Emanuel, 2013 Fall B term
@@ -48,17 +48,18 @@ I'm familiar with development in both Windows and Linux. A lot of my project dev
 
 ## <span style="color: CadetBlue ">PROJECTS</span>
 
-#### DARPA Robotics Challenge(DRC) Finals: Team WPI-CMU, WPI 07/2014-Present
+#### DARPA Robotics Challenge(DRC) Finals: Team WPI-CMU, WPI 07/2014-06/2015
 
-- Worked on drill task to control the Boston Dynamics Atlas Robot to drill a hole on the wall
-- Working on a whole-body manipulation controller to enable the robot to perform varies of tasks as
+- Worked as the lead of wall task to control the Atlas Robot to drill a hole on the wall
+- Implemented the state machine and force control algorithm for drill motions
+- Worked with [Siyuan Feng](http://www.cs.cmu.edu/~sfeng/) on the whole-body manipulation controller to enable the robot to perform varies of tasks as
 well as keep balance
 
 #### Robotic System for Use of Fall Risk Assessment in Home Environment, WPI 07/2013-05/2014
 
 - Worked out a robotic framework for home fall risk assessment
-- Implemented a web interface for Turtlebot2 platform to make the system accessible from a webpage 
-- Studyed the navigation of robots in home environment and hazard detection for fall risk assessment   
+- Implemented a web interface for Turtlebot2 platform to make the system accessible from a webpage
+- Studyed the navigation of robots in home environment and hazard detection for fall risk assessment
 
 <img src="/img/projects/fall_risk_turtle.jpg" width="275"/>
 <img src="/img/projects/web_interface.png" width="470" />
@@ -137,4 +138,3 @@ well as keep balance
 - Vice-president, Science Association of the Department of Automation, NCEPU, 09/2009-09/2010
 
 <p align="right"><a href="#TOP">Back To Top</a></p>
-
