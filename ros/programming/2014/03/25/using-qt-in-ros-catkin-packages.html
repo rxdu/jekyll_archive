@@ -96,43 +96,40 @@
 
 <p>To compile a QT executable widget, you need to add the following to your CMakeLists.txt:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span>find_package(Qt4 COMPONENTS QtCore QtGui REQUIRED)
-<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>
-<span class="line-numbers"> <a href="#n3" name="n3">3</a></span>include(${QT_USE_FILE})
-<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>add_definitions(-DQT_NO_KEYWORDS)
-<span class="line-numbers"> <a href="#n5" name="n5">5</a></span>add_definitions(${QT_DEFINITIONS})
-<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>
-<span class="line-numbers"> <a href="#n7" name="n7">7</a></span>set(HEADER_FILES 
-<span class="line-numbers"> <a href="#n8" name="n8">8</a></span>  src/rviz_gui.h
-<span class="line-numbers"> <a href="#n9" name="n9">9</a></span>  include/myviz.h
-<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>)
-<span class="line-numbers"><a href="#n11" name="n11">11</a></span>
-<span class="line-numbers"><a href="#n12" name="n12">12</a></span>set(SOURCE_FILES
-<span class="line-numbers"><a href="#n13" name="n13">13</a></span>  src/rviz_gui.cpp
-<span class="line-numbers"><a href="#n14" name="n14">14</a></span>  src/main.cpp
-<span class="line-numbers"><a href="#n15" name="n15">15</a></span>  ${MOC_FILES}
-<span class="line-numbers"><a href="#n16" name="n16">16</a></span>)
-<span class="line-numbers"><a href="#n17" name="n17">17</a></span>
-<span class="line-numbers"><a href="#n18" name="n18">18</a></span>set(FORM_FILES 
-<span class="line-numbers"><a href="#n19" name="n19">19</a></span>  src/rviz_gui.ui
-<span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>)
-<span class="line-numbers"><a href="#n21" name="n21">21</a></span>
-<span class="line-numbers"><a href="#n22" name="n22">22</a></span>QT4_WRAP_CPP(MOC_SRC_H
-<span class="line-numbers"><a href="#n23" name="n23">23</a></span>  ${HEADER_FILES}
-<span class="line-numbers"><a href="#n24" name="n24">24</a></span>)
-<span class="line-numbers"><a href="#n25" name="n25">25</a></span>
-<span class="line-numbers"><a href="#n26" name="n26">26</a></span>QT4_WRAP_UI(MOC_GUI_H 
-<span class="line-numbers"><a href="#n27" name="n27">27</a></span>  ${FORM_FILES}
-<span class="line-numbers"><a href="#n28" name="n28">28</a></span>)
-<span class="line-numbers"><a href="#n29" name="n29">29</a></span>
-<span class="line-numbers"><strong><a href="#n30" name="n30">30</a></strong></span>include_directories(${CMAKE_CURRENT_BINARY_DIR})
-<span class="line-numbers"><a href="#n31" name="n31">31</a></span>
-<span class="line-numbers"><a href="#n32" name="n32">32</a></span>add_executable(rviz_gui ${SOURCE_FILES} ${MOC_SRC_H} ${MOC_GUI_H})
-<span class="line-numbers"><a href="#n33" name="n33">33</a></span>target_link_libraries(rviz_gui ${QT_LIBRARIES} ${catkin_LIBRARIES})
-</pre></div>
-</div>
-</div>
+<pre><code class="language-cmake">find_package(Qt4 COMPONENTS QtCore QtGui REQUIRED)
+
+include(${QT_USE_FILE})
+add_definitions(-DQT_NO_KEYWORDS)
+add_definitions(${QT_DEFINITIONS})
+
+set(HEADER_FILES 
+  src/rviz_gui.h
+  include/myviz.h
+)
+
+set(SOURCE_FILES
+  src/rviz_gui.cpp
+  src/main.cpp
+  ${MOC_FILES}
+)
+
+set(FORM_FILES 
+  src/rviz_gui.ui
+)
+
+QT4_WRAP_CPP(MOC_SRC_H
+  ${HEADER_FILES}
+)
+
+QT4_WRAP_UI(MOC_GUI_H 
+  ${FORM_FILES}
+)
+
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
+add_executable(rviz_gui ${SOURCE_FILES} ${MOC_SRC_H} ${MOC_GUI_H})
+target_link_libraries(rviz_gui ${QT_LIBRARIES} ${catkin_LIBRARIES})
+</code></pre>
 
 <p>To understand why you should do this, you need to understand the QT build system. For detailed illustration, read this <a href="http://qt-project.org/quarterly/view/using_cmake_to_build_qt_projects">Document</a> from qt-project.org. <strong>The image shown below is also from this document</strong>. I include it here just for convinence of reference.</p>
 
