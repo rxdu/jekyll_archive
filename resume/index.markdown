@@ -54,7 +54,7 @@ I'm familiar with development in both Windows and Linux. A lot of my project dev
 - Implemented the state machine and force control algorithm for drill motions
 - Worked with [Siyuan Feng](http://www.cs.cmu.edu/~sfeng/) on the whole-body manipulation controller to enable the robot to perform varies of tasks as
 well as keep balance
-- [Demo Video (Youtube):](https://www.youtube.com/watch?v=J-3JWAuBzE8)
+- [Demo Video (Youtube)](https://www.youtube.com/watch?v=J-3JWAuBzE8)
 
 #### Robotic System for Use of Fall Risk Assessment in Home Environment, WPI 07/2013-05/2014
 
@@ -90,7 +90,7 @@ well as keep balance
 - Studied the kinematics and dynamics model of the aircraft
 - Simulated the attitude and position control of the quadrotor with PD control law in Matlab
 - Implemented the position control algorithms on the Hummingbird quadrotor from AscTec
-- [Demo Video (Youtube):](http://www.youtube.com/watch?v=GF0DLWTfk3U&feature=c4-overview&list=UUZavD4SDX_YwDwgSEyUDrcQ)
+- [Demo Video (Youtube)](http://www.youtube.com/watch?v=GF0DLWTfk3U&feature=c4-overview&list=UUZavD4SDX_YwDwgSEyUDrcQ)
 
 <img src="/img/projects/autonomous_quadrotor.png" width="395" />
 <img src="/img/projects/humming_bird.JPG" width="340" />
@@ -100,7 +100,7 @@ well as keep balance
 - Developed the kinematics for the MRI Neurosurgery Robot
 - Implemented the 3D visualization and representation of the robot with Java and VTK library
 - Tested and embedded the program into the software system of the MRI Neurosurgery Robot
-- [Demo Video (Youtube):](http://www.youtube.com/watch?v=8LrmLvdZvYY&feature=c4-overview&list=UUZavD4SDX_YwDwgSEyUDrcQ)
+- [Demo Video (Youtube)](http://www.youtube.com/watch?v=8LrmLvdZvYY&feature=c4-overview&list=UUZavD4SDX_YwDwgSEyUDrcQ)
 
 <img src="/img/projects/vtk.png" width="392" />
 <img src="/img/projects/vtk_robot.jpg" width="365" />

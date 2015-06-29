@@ -26,4 +26,3 @@ My research interest is to study the control and motion planning of mobile robot
 * Ruixiang Du, "An Intelligent Portable Aerial Surveillance System:Modeling and Image Stitching", Worcester Polytechnic Institute, 2013 ([pdf](http://www.wpi.edu/Pubs/ETD/Available/etd-052913-120432/unrestricted/rdu.pdf))
 
 
-
