@@ -54,6 +54,7 @@ I'm familiar with development in both Windows and Linux. A lot of my project dev
 - Implemented the state machine and force control algorithm for drill motions
 - Worked with [Siyuan Feng](http://www.cs.cmu.edu/~sfeng/) on the whole-body manipulation controller to enable the robot to perform varies of tasks as
 well as keep balance
+- [Demo Video (Youtube):](https://www.youtube.com/watch?v=J-3JWAuBzE8)
 
 #### Robotic System for Use of Fall Risk Assessment in Home Environment, WPI 07/2013-05/2014
 
