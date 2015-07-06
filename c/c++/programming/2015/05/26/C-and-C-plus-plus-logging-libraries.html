@@ -3,33 +3,33 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Software Upgrade for Turtlebot | Ruixiang Du</title>
+        <title>C/C++ Logging Frameworks | Ruixiang Du</title>
         
           <meta name="author" content="rxdu">
         
-        <meta name="title" content="Software Upgrade for Turtlebot" >
+        <meta name="title" content="C/C++ Logging Frameworks" >
         <link rel="icon" type="image/png" href="/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
 	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter" />
 
 
-  <meta name="description" content="This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki.
+  <meta name="description" content="My goal is to find a lightweight, high-performance logging library for use with C/C++, mostly for robotics control and navigation applications. Ref[1] lists a lot of available C/C++ Logging libraries:
 
 ">
-  <meta property="og:description" content="This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki.
+  <meta property="og:description" content="My goal is to find a lightweight, high-performance logging library for use with C/C++, mostly for robotics control and navigation applications. Ref[1] lists a lot of available C/C++ Logging libraries:
 
 " />
-  <meta name="twitter:description" content="This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki.
+  <meta name="twitter:description" content="My goal is to find a lightweight, high-performance logging library for use with C/C++, mostly for robotics control and navigation applications. Ref[1] lists a lot of available C/C++ Logging libraries:
 
 " />
 
-<meta property="og:title" content="Software Upgrade for Turtlebot" />
+<meta property="og:title" content="C/C++ Logging Frameworks" />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="/sharer.png" />
-<meta property="og:url" content="/ros/turtlebot/2014/01/21/software-upgrade-for-turtlebot.html" />
+<meta property="og:url" content="/c/c++/programming/2015/05/26/C-and-C-plus-plus-logging-libraries.html" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Software Upgrade for Turtlebot" />
+<meta name="twitter:title" content="C/C++ Logging Frameworks" />
 <meta name="twitter:image" content="/sharer.png" />
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/style.css">
@@ -68,9 +68,9 @@
 <div class="unit whole">
 <article>
 	<header>
-		<h1>Software Upgrade for Turtlebot</h1>
+		<h1>C/C++ Logging Frameworks</h1>
 		<p class="meta">
-			<time class="timeago postlist-meta" datetime="2014-01-21">January 21, 2014</time>
+			<time class="timeago postlist-meta" datetime="2015-05-26">May 26, 2015</time>
 			<!-- <a class="button blue share" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;">Share on fb</a>
 			
 				<a class="button blue share" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;">Share on twitter</a>
@@ -78,60 +78,75 @@
 		</p>
 	</header>
 	<section>
-		<p>This article briefly illustrates how to upgrade the software of turtlebot to Ubuntu 12.04 &amp; ROS Groovy from earlier versions. Several issues that may occur during the upgrade are stated as the supplement of official tutorials from ROS wiki.</p>
+		<p>My goal is to find a lightweight, high-performance logging library for use with C/C++, mostly for robotics control and navigation applications. Ref[1] lists a lot of available C/C++ Logging libraries:</p>
 
-<!-- more -->
+<ul>
+  <li><a href="http://www.boost.org/doc/libs/release/libs/log/">Boost::Log</a></li>
+  <li><a href="https://github.com/easylogging/easyloggingpp">EasyLogging++</a></li>
+  <li><a href="http://www.codeproject.com/Articles/288827/g-log-An-efficient-asynchronous-logger-using-Cplus">g2log</a></li>
+  <li><a href="https://github.com/KjellKod/g3log">g3log</a></li>
+  <li><a href="https://code.google.com/p/google-glog/">glog</a></li>
+  <li><a href="http://sourceforge.net/projects/log4cplus/">Log4cplus</a></li>
+  <li><a href="http://log4cpp.sourceforge.net/">Log4cpp</a></li>
+  <li><a href="http://logging.apache.org/log4cxx/">Log4cxx</a></li>
+  <li><a href="http://pantheios.sourceforge.net/">Pantheios</a></li>
+  <li><a href="https://github.com/gabime/spdlog/">spdlog</a></li>
+  <li><a href="https://github.com/mattiasflodin/reckless">reckless</a></li>
+  <li><a href="https://github.com/SergiusTheBest/plog">plog</a></li>
+  <li><a href="https://github.com/RafaGago/mini-async-log">mini-async-log</a></li>
+</ul>
 
-<p>The ROS wiki page <a href="http://wiki.ros.org/Robots/TurtleBot/Robot%20Setup">Robots/TurtleBot/Robot Setup</a> is a good reference but it is not always up to date. It uses the system image provided by willow garage, which has integrated most packages required to run turtlebot. What you mainly need to do are just installing Ubuntu with the modified image and then making some small updates. But it’s not easy to find sufficient information about that image to make sure it’s exactly what you want and it’s fully compatible with your netbook. So this tutorial presents how to install the necessary components separately.</p>
+<p>Boost::Log is well implemented and documented, but it’s relatively heavyweight. It also can be more difficult to be adapted for more customized applications, for example an application runs on embedded boards with limited hardware resources. So I rule this option out at the first place.</p>
 
-<p><strong>Install Ubuntu</strong></p>
+<p>For rest of the options, they are all free, open-source and lightweight. They can be grouped into two categories: synchronous and asynchronous.</p>
 
-<p>You can download the iso image of Ubuntu 12.04 from its <a href="http://www.ubuntu.com/download">official website</a>. Then burn the image to a flash drive or CD to make a bootable media. The installation steps are very straightforward and you mainly need to make some easy choices and click “next”. If necessary, you can have a look at this page <a href="http://www.ubuntu.com/download/desktop/install-desktop-long-term-support">Install Ubuntu 12.04.2 LTS</a>.</p>
+<p><strong>Synchronous libraries</strong>:</p>
 
-<p><strong>Configure Wireless Network of the Netbook</strong></p>
+<ul>
+  <li>EasyLogging++ (asynchronous mode is in experimental stages)</li>
+  <li>glog</li>
+  <li>Log4cplus</li>
+  <li>Log4cpp</li>
+  <li>Log4cxx</li>
+  <li>Pantheios (with default settings)</li>
+  <li>plog</li>
+</ul>
 
-<p>Now you have a netbook running Ubuntu. To complete the following steps, you need to make the netbook to have access to the Internet. To connect to WPI network (either wireless or wired), you need to get your computer registered and install required certificate files. Definitely it’s more convenient to use the wireless network since the robot needs to move around. You can follow this WPI web page to complete the configuration: <a href="http://www.wpi.edu/Academics/CCC/Netops/Wireless/Setup/Linux.html">link</a>.</p>
+<p><strong>Asynchronous libraries</strong>:</p>
 
-<p><strong>Install ROS</strong></p>
+<ul>
+  <li>reckless</li>
+  <li>g2log</li>
+  <li>g3log</li>
+  <li>spdlog (support both)</li>
+  <li>mini-asyn-log</li>
+</ul>
 
-<p>Follow this wiki page <a href="http://www.ros.org/wiki/groovy/Installation/Ubuntu">groovy/Installation/Ubuntu</a> to finish the installation of ROS groovy. It should be easy to find the latest installation instruction if the link for the old one is invalid.</p>
+<p>Asynchronous libraries use separate threads to handle logs so that it will not block the main application for a long time to wait for the logs written to the disk. Not counting the implementation qualities, asynchronous structure is more suitable for applications that emphasize performance and responsiveness.</p>
 
-<p><strong>Install Turtlebot Packages</strong></p>
+<p>Another factor I consider is the activeness of the library development and maintenance. Log4cpp and Pantheios haven’t been updated for a few years. Potentially they may start introducing issues while compilers and OSs are evolving. Other projects seem to be still active.</p>
 
-<p>This <a href="http://ros.org/wiki/Robots/TurtleBot">Robots/Turtlebot</a> page provides well written documents of ROS packages for turtlebot. First follow <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Installation">Installation</a> step by step. The easiest way should be “Install from Debs”. On the <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Post-Installation%20Setup">Post-Installation Setup</a> page, you first need to install chrony for clock synchronization. Don’t forget to check the section ‘'’Special Cases’’’. Probably you need to take care of <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Create%20Base">Create Base</a> and <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Netbook%20Battery%20Setup">Netbook Battery Setup</a>. Be careful that the Netbook Battery Setup instruction is not up to date at the time this wiki is written. The robot cannot find battery information of the netbook from “/proc/acpi/battery/BAT1”. Instead, use “/sys/class/power_supply/BAT1” and the command changes to:</p>
+<ol>
+  <li>
+    <p>reckless library is claimed to be self-contained without external dependency. However, it acquires this feature by including files from boost library.</p>
+  </li>
+  <li>
+    <p>g2log and g3log are two generations of the same library by the same author. According to the project introduction, g3log includes new features while g2log focuses on reliability and compiler supports. “Only well, time tested, features from g3log will make it into g2log.”[3]</p>
+  </li>
+  <li>
+    <p>spdlog emphasizes speed, just as indicated by its name. I don’t see obvious issues in it and according to the benchmarks it provide, it can be even more efficient than g2log in terms of time needed to log 1,000,000 lines in asynchronous mode.</p>
+  </li>
+</ol>
 
-<p><code>
- $export TURTLEBOT_BATTERY=/proc/acpi/battery/BAT1
-</code></p>
+<p>–More comments will be added after actual use.–</p>
 
-<p>Follow <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Workstation%20Installation">Workstation Installation</a> and <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Network%20Configuration">Network Configuration</a> to make sure your robot can communicate with the work station successfully.</p>
+<p>[Reference]</p>
 
-<p><strong>More Configurations</strong></p>
-
-<p>Now you can step to the next section of [http://ros.org/wiki/Robots/TurtleBot Robots/Turtlebot]. Work is still not done. When following the <a href="http://ros.org/wiki/turtlebot_bringup/Tutorials/groovy/TurtleBot%20Bringup">turtlebot_bringup/Tutorials/groovy/TurtleBot Bringup</a>, probably you will get errors when you try to execute roslaunch command:</p>
-
-<p><code>
-$roslaunch turtlebot_bringup minimal.launch
-</code></p>
-
-<p>If you get a error message like this:</p>
-
-<p><code>
-Failed to open port /dev/ttyUSB0.  Please make sure the Create cable is plugged into the computer.
-</code></p>
-
-<p>It’s because you don’t have the necessary access permission to the ttyUSB0 device. The solution is to add the user account you’re using to the “dialout” group.</p>
-
-<p><code>
- $sudo adduser second_user dialout
-</code></p>
-
-<p>Now you should be able to successfully roslaunch the above launch file. After starting minimal.launch and then turtlebot_dashboard.launch, you should get information of the robot from the dashboard.</p>
-
-<p><strong>Conclusion</strong></p>
-
-<p>If you have managed to get through all steps stated above, you’re all set for the upgrade. Actually, the above instruction should still be helpful when you’re trying to upgrade the software to a newer version in the future. Basically the ideas should stay the same. Just make sure you have the right combination of Ubuntu version and ROS version. You also need to check all relevant packages for the turtlebot and your project have got support to the version of ROS you’re trying to use.</p>
-
+<ol>
+  <li><a href="https://github.com/SergiusTheBest/plog">plog git</a></li>
+  <li><a href="https://sites.google.com/site/kjellhedstrom2//g2log-efficient-background-io-processign-with-c11#TOC_the_synchronous">g2log presentation</a></li>
+  <li><a href="https://github.com/KjellKod/g3log">g3log git</a></li>
+</ol>
 
 	</section>
 	

@@ -1,6 +1,17 @@
 [
     
     {
+      "title"    : "C/C++ Logging Frameworks",
+      "href"     : "/c/c++/programming/2015/05/26/C-and-C-plus-plus-logging-libraries.html",
+      "date"     : {
+         "day"   : "26",
+         "month" : "May",
+         "year"  : "2015"
+      }
+    }
+    ,
+    
+    {
       "title"    : "Setting Up Development Environment for MCUs with Open-Source Tools (2)",
       "href"     : "/embedded_development/2015/02/01/setting-up-development-environment-for-mcu-using-opensource-tools-2.html",
       "date"     : {
