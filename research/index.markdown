@@ -11,18 +11,26 @@ My research interest is to study the control and motion planning of mobile robot
 
 **Journal**
 
-1. DeDonato, M., Dimitrov, V., Du, R., Giovacchini, R., Knoedler, K., Long, X., Polido, F., Gennert, M., Padir, T., Feng, S., Moriguchi, H., Whitman, E., Xinjilefu, X., Atkeson, C., “Human-in-the-Loop Control of a Humanoid Robot for Disaster Response: A Report from the DARPA Robotics Challenge Trials,” Journal of Field Robotics [to appear 2015].
+* DeDonato, M., Dimitrov, V., Du, R., Giovacchini, R., Knoedler, K., Long, X., Polido, F., Gennert, M., Padir, T., Feng, S., Moriguchi, H., Whitman, E., Xinjilefu, X., Atkeson, C., *“Human-in-the-Loop Control of a Humanoid Robot for Disaster Response: A Report from the DARPA Robotics Challenge Trials,”* Journal of Field Robotics, Volume 32, Pages 275-292, 2015
 
-**Conference:** 
+**Conference:**
 
-1. Ruixiang Du, Taskin Padir, "Image Stitching Techniques for An Intelligent Portable Aerial Surveillance System," IEEE TePRA 2014 ([pdf]())
+In Proceedings
+
+* Ruixiang Du, Taskin Padir, *"Image Stitching Techniques for An Intelligent Portable Aerial Surveillance System,"* IEEE TePRA 2014 ([pdf]())
+
+Under Review
+
+* Benzun Pious Wisely Babu, Ruixiang Du, Taskin Padir, Michael Gennert, *"Improving Robustness in Complex Tasks for a Supervisor Operated Humanoid,"* IEEE Humanoids 2015
+
+* Nandan Banerjee, Xianchao Long, Ruixiang Du, Felipe Polido, Siyuan Feng, Christopher Atkeson, Michael Gennert, Taskin Padir, *"Human-Supervised Control of the ATLAS Humanoid Robot for Traversing Doors,"* IEEE Humanoids 2015
+
+* Christopher Atkeson, Nandan Banerjee, Dmitry Berenson, Mathew DeDonato, Ruixiang Du, Siyuan Feng, Joohyung Kim, Kevin Knoedler, Chenggang Liu, Xianchao Long, Felipe Polido, Michael Gennert, Taskin Padir, X Xinjilefu, Benzun Pious Wisely Babu, Christopher Bove, Joshua Graff, Peng He, Aaron Jaeger, Lening Li, *"NO FALLS, NO RESETS: Reliable Humanoid Behavior in the DARPA Robotics Challenge,"* IEEE Humanoids 2015
 
 **Workshop:**
 
-1. Ruixiang Du, Vinayak Jagtap, Yanren Long, Oke Onwuka, Taskin Padir, "Robotics Enabled In-Home Environment Screening for Fall Risks", ACM MobiSys 2014 - Proceedings of the 2014 workshop on Mobile augmented reality and robotic technology-based systems, Pages 9-12 ([pdf]())
+* Ruixiang Du, Vinayak Jagtap, Yanren Long, Oke Onwuka, Taskin Padir, *"Robotics Enabled In-Home Environment Screening for Fall Risks,"* ACM MobiSys 2014 - Proceedings of the 2014 workshop on Mobile augmented reality and robotic technology-based systems, Pages 9-12 ([pdf]())
 
-**Master Thesis:** 
+**Master Thesis:**
 
-* Ruixiang Du, "An Intelligent Portable Aerial Surveillance System:Modeling and Image Stitching", Worcester Polytechnic Institute, 2013 ([pdf](http://www.wpi.edu/Pubs/ETD/Available/etd-052913-120432/unrestricted/rdu.pdf))
-
-
+* Ruixiang Du, *"An Intelligent Portable Aerial Surveillance System:Modeling and Image Stitching,"* Worcester Polytechnic Institute, 2013 ([pdf](http://www.wpi.edu/Pubs/ETD/Available/etd-052913-120432/unrestricted/rdu.pdf))
