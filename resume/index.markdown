@@ -35,7 +35,7 @@ I'm familiar with development in both Windows and Linux. A lot of my project dev
 ## <span style="color: CadetBlue ">RESEARCH & TEACHING EXPERIENCE</span>
 
 * **Research Assistant**
-	- [RIVeR Lab](http://robot.wpi.edu/), Professor Taskin Padir , 10/2014-Present
+	- [RIVeR Lab](http://robot.wpi.edu/), Professor Taskin Padir , 10/2014-08/2015
 * **Teaching Assistant**
 	- ECE2010, Introduction to ECE, Professor William Michalson, 2014 Fall A term
 	- ECE549/RBE502, Robot Control, Professor Taskin Padir, 2014 Spring
@@ -71,14 +71,6 @@ well as keep balance
 <img src="/img/projects/drc_drill_robot.JPG" width="350"/>
 <img src="/img/projects/drc_drill_hole.JPG" width="350" />
 
-#### Robotic System for Use of Fall Risk Assessment in Home Environment, WPI 07/2013-05/2014
-
-- Worked out a robotic framework for home fall risk assessment
-- Implemented a web interface for Turtlebot2 platform to make the system accessible from a webpage
-- Studyed the navigation of robots in home environment and hazard detection for fall risk assessment
-
-<img src="/img/projects/fall_risk_turtle.jpg" width="275"/>
-<img src="/img/projects/web_interface.png" width="470" />
 
 #### DARPA Robotics Challenge(DRC) Trials: Team WRECS, WPI 09/2013-12/2013
 
@@ -88,6 +80,16 @@ well as keep balance
 
 <img src="/img/projects/drc_door.jpg" width="290" />
 <img src="/img/projects/door_task_panel.png" width="455"/>
+
+
+#### Robotic System for Use of Fall Risk Assessment in Home Environment, WPI 07/2013-08/2013, 01/2014-05/2014
+
+- Worked out a robotic framework for home fall risk assessment
+- Implemented a web interface for Turtlebot2 platform to make the system accessible from a webpage
+- Studyed the navigation of robots in home environment and hazard detection for fall risk assessment
+
+<img src="/img/projects/fall_risk_turtle.jpg" width="275"/>
+<img src="/img/projects/web_interface.png" width="470" />
 
 
 #### Intelligent Portable Aerial Surveillance System – IPASS, WPI 12/2012-05/2013
