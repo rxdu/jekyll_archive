@@ -60,6 +60,7 @@ I'm familiar with development in both Windows and Linux. A lot of my project dev
 <img src="/img/projects/sim_rc_car.png" width="350"/>
 <img src="/img/projects/sim_log.png" width="285"/>
 
+
 #### DARPA Robotics Challenge(DRC) Finals: Team WPI-CMU, WPI 07/2014-06/2015
 
 - Worked as the lead of wall task to control the Atlas Robot to drill a hole on the wall
