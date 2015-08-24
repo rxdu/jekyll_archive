@@ -11,7 +11,7 @@ footer: true
 
 * [DARPA Robotics Challenge (DRC)](/projects/drc)
 
-| "The DRC is a competition of robot systems and software teams vying to develop robots capable of assisting humans in responding to natural and man-made disasters. It was designed to be extremely difficult."[DRC Official Site](http://www.theroboticschallenge.org/) | <img src="/img/projects/drc_atlas_back.JPG" width="500"/> |
+| The DARPA Robotics Challenge (DRC) was introduced after the Fukushima nuclear disaster which happened in Japan, 2011, and it aims at pushing the boundaries of technology so as to make life saving robotics systems available for future disasters. WPI's entry of the DRC started from the Virtual Robotics Challenge phase, in which we got the 2nd place and won an Atlas Robot built by Boston Dynamics. We competed in the DRC Trials in Florida, December 2013 and entered the final phase of the competition as one of the finalist teams. In California, June 2015, our team successfully finished the DRC Finals and ranked the 7th out of 23 competing teams from all over the world. | | <img src="/img/projects/drc_atlas_back.JPG" width="1500"/> |
 
 * [Robotic System for Use of Fall Risk Assessment in Home Environment](/projects/fallrisk)
 
