@@ -15,7 +15,7 @@ footer: true
 
 * [Robotic System for Use of Fall Risk Assessment in Home Environment](/projects/fallrisk)
 
-| "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." | <img src="/img/projects/fall_risk_turtlebot2.JPG" width="1000"/> |
+| Fall risks present in living environment are the leading cause of mortality in older adults. Limited number of trained professionals to assess a house for fall risks and higher costs make the prevention of fall risks inaccessible to many necessitous patients. This project focuses on the design of a robot control system for in-home environment screening. The system is designed to be capable of supporting both manual and autonomous fall-risk assessment, including measuring distance between 2 objects, assessing lighting conditions, and interacting with the patient using telepresence. | | <img src="/img/projects/fall_risk_turtlebot2.JPG" width="1300"/> |
 
 * [Intelligent Portable Aerial Surveillance System – IPASS](/projects/ipass)
 

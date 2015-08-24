@@ -13,6 +13,7 @@ The DARPA Robotics Challenge (DRC) was introduced after the Fukushima nuclear ac
 WPI's entry of the DRC started from the Virtual Robotics Challenge phase, in which we got the 2nd place and won an Atlas Robot built by Boston Dynamics. We competed in the DRC Trials in Florida, December 2013 and entered the final phase of the competition as one of the finalist teams. In California, June 2015, our team successfully finished the DRC Finals and ranked the 7th out of 23 competing teams from all over the world.
 
 **The DRC Finals**
+
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/1PiJtRLJ2BI" frameborder="0" allowfullscreen></iframe></center>
 
 <center>Team WPI-CMU DRC Finals Day 2: Time Lapse x20</center>
@@ -29,6 +30,8 @@ WPI's entry of the DRC started from the Virtual Robotics Challenge phase, in whi
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/UL3gMu76Nik" frameborder="0" allowfullscreen></iframe></center>
 
 <center>Team WRECS DRC Trials: A Brief Review</center>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/uPOi-C9TgAU" frameborder="0" allowfullscreen></iframe></center>
 
 <center><img src="/img/projects/drc_door.jpg" width="215" />
 <img src="/img/projects/door_task_panel.png" width="345"/></center>
