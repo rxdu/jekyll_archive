@@ -19,7 +19,7 @@ footer: true
 
 * [Intelligent Portable Aerial Surveillance System – IPASS](/projects/ipass)
 
-| "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." | <img src="/img/projects/ipass_final.png" width="1000"/> |
+| Intelligent Portable Aerial Surveillance System (IPASS) is aimed at developing a low-cost, light-weight unmanned aerial vehicle that can provide sufficient battlefield intelligence for individual troops. This project was defined as an addition and improvement to the original MQP project sponsored by the Air Force Research Laboratory. Instead of focusing on the mechanical design and system integration which were done by the IPASS team, this project concentrates on the system modeling, dynamic simulation and high-speed image stitching. | | <img src="/img/projects/ipass_final.png" width="1200"/> |
 
 * [Autonomous Flight Control of a Quadrotor](/projects/quadrotor)
 
