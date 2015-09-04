@@ -34,3 +34,7 @@ Under Review
 **Master Thesis:**
 
 * Ruixiang Du, *"An Intelligent Portable Aerial Surveillance System:Modeling and Image Stitching,"* Worcester Polytechnic Institute, 2013 ([pdf](http://www.wpi.edu/Pubs/ETD/Available/etd-052913-120432/unrestricted/rdu.pdf))
+
+## Similar Research
+
+* [Prof. Ron Alterovitz, The Computational Robotics Group](http://robotics.cs.unc.edu/publications.html)
