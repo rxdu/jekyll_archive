@@ -37,4 +37,7 @@ Under Review
 
 ## Similar Research
 
-* [Prof. Ron Alterovitz, The Computational Robotics Group](http://robotics.cs.unc.edu/publications.html)
+* Ron Alterovitz, [The Computational Robotics Group](http://robotics.cs.unc.edu/publications.html)
+* Jur van den Berg, [Algorithmic Robotics Lab](http://arl.cs.utah.edu/pubs/)[Google Scholar Page](https://scholar.google.com/citations?user=VjsNXysAAAAJ)
+* Lydia Kavraki, [Kavraki Lab](http://www.kavrakilab.org/robotics/), [Google Scholar Page](https://scholar.google.com/citations?user=Q6pxNZYAAAAJ&hl=en), [OMPL](http://ompl.kavrakilab.org/)
+* Nicholas Roy, [Robust Robotics Group | CSAIL](http://groups.csail.mit.edu/rrg/index.php?n=Main.Publications), [Google Scholar Page](https://scholar.google.com/citations?user=aM3i_9oAAAAJ&hl=en&oi=ao)
