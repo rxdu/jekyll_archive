@@ -19,13 +19,16 @@ In Proceedings
 
 * <u>Ruixiang Du</u>, Taskin Padir, *"Image Stitching Techniques for An Intelligent Portable Aerial Surveillance System,"* IEEE TePRA 2014 ([pdf]())
 
+Accepted
+
+* Nandan Banerjee, Xianchao Long, <u>Ruixiang Du</u>, Felipe Polido, Siyuan Feng, Christopher Atkeson, Michael Gennert, Taskin Padir, *"Human-Supervised Control of the ATLAS Humanoid Robot for Traversing Doors,"* IEEE Humanoids 2015
+
+* Christopher Atkeson, Nandan Banerjee, Dmitry Berenson, Mathew DeDonato, <u>Ruixiang Du</u>, Siyuan Feng, Joohyung Kim, Kevin Knoedler, Chenggang Liu, Xianchao Long, Felipe Polido, Michael Gennert, Taskin Padir, X Xinjilefu, Benzun Pious Wisely Babu, Christopher Bove, Joshua Graff, Peng He, Aaron Jaeger, Lening Li, *"NO FALLS, NO RESETS: Reliable Humanoid Behavior in the DARPA Robotics Challenge,"* IEEE Humanoids 2015
+
 Under Review
 
 * Benzun Pious Wisely Babu, Ruixiang Du, Taskin Padir, Michael Gennert, *"Improving Robustness in Complex Tasks for a Supervisor Operated Humanoid,"* IEEE Humanoids 2015
 
-* Nandan Banerjee, Xianchao Long, Ruixiang Du, Felipe Polido, Siyuan Feng, Christopher Atkeson, Michael Gennert, Taskin Padir, *"Human-Supervised Control of the ATLAS Humanoid Robot for Traversing Doors,"* IEEE Humanoids 2015
-
-* Christopher Atkeson, Nandan Banerjee, Dmitry Berenson, Mathew DeDonato, Ruixiang Du, Siyuan Feng, Joohyung Kim, Kevin Knoedler, Chenggang Liu, Xianchao Long, Felipe Polido, Michael Gennert, Taskin Padir, X Xinjilefu, Benzun Pious Wisely Babu, Christopher Bove, Joshua Graff, Peng He, Aaron Jaeger, Lening Li, *"NO FALLS, NO RESETS: Reliable Humanoid Behavior in the DARPA Robotics Challenge,"* IEEE Humanoids 2015
 
 **Workshop:**
 
