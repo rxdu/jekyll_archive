@@ -25,11 +25,6 @@ Accepted
 
 * Christopher Atkeson, Nandan Banerjee, Dmitry Berenson, Mathew DeDonato, <u>Ruixiang Du</u>, Siyuan Feng, Joohyung Kim, Kevin Knoedler, Chenggang Liu, Xianchao Long, Felipe Polido, Michael Gennert, Taskin Padir, X Xinjilefu, Benzun Pious Wisely Babu, Christopher Bove, Joshua Graff, Peng He, Aaron Jaeger, Lening Li, *"NO FALLS, NO RESETS: Reliable Humanoid Behavior in the DARPA Robotics Challenge,"* IEEE Humanoids 2015
 
-Under Review
-
-* Benzun Pious Wisely Babu, Ruixiang Du, Taskin Padir, Michael Gennert, *"Improving Robustness in Complex Tasks for a Supervisor Operated Humanoid,"* IEEE Humanoids 2015
-
-
 **Workshop:**
 
 * <u>Ruixiang Du</u>, Vinayak Jagtap, Yanren Long, Oke Onwuka, Taskin Padir, *"Robotics Enabled In-Home Environment Screening for Fall Risks,"* ACM MobiSys 2014 - Proceedings of the 2014 workshop on Mobile augmented reality and robotic technology-based systems, Pages 9-12 ([pdf]())
