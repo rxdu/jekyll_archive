@@ -41,3 +41,4 @@ Accepted
 * Nicholas Roy, [Robust Robotics Group - CSAIL](http://groups.csail.mit.edu/rrg/index.php?n=Main.Publications), [Google Scholar Page](https://scholar.google.com/citations?user=aM3i_9oAAAAJ&hl=en&oi=ao)
 * Sertac Karaman, [MIT](http://sertac.scripts.mit.edu/web/index.html), [Google Scholar Page](https://scholar.google.com/citations?user=Vu-Zb7EAAAAJ&hl=en)
 * Erion Plaku, [CUA](http://faculty.cua.edu/plaku/Publications.html), [Google Scholar Page](https://scholar.google.com/citations?user=DK3QY9sAAAAJ&hl=en)
+* Vijay Kumar, [UPenn](http://www.kumarrobotics.org/research/), [Google Scholar](https://scholar.google.com/citations?user=h2wjedwAAAAJ&hl=en)
