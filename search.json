@@ -1,6 +1,17 @@
 [
     
     {
+      "title"    : "MCU Programming Tips",
+      "href"     : "/c/c++/programming/2015/05/26/mcu-programming-tips.html",
+      "date"     : {
+         "day"   : "26",
+         "month" : "May",
+         "year"  : "2015"
+      }
+    }
+    ,
+    
+    {
       "title"    : "C/C++ Logging Frameworks",
       "href"     : "/c/c++/programming/2015/05/26/C-and-C-plus-plus-logging-libraries.html",
       "date"     : {
