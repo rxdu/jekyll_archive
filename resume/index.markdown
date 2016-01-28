@@ -7,7 +7,7 @@ layout: page
 &nbsp; [EDUCATION](#EDUCATION) &nbsp;--&nbsp; [TECHNICAL SKILLS](#SKILLS) &nbsp;--&nbsp; [RA&TA](#RATA) &nbsp;--&nbsp; [PROJECTS](#PROJECTS) &nbsp;--&nbsp;  [HONORS](#HONORS) &nbsp;--&nbsp; [ACTIVITIES](#ACTIVITIES)
 
 <p></p>
-<p align="right"><a href="{{ root_url }}/resume/Ruixiang_Du_Resume.pdf">See the Latest PDF version</a></p>
+<p align="right"><a href="{{ root_url }}/resume/RuixiangDuResume201601.pdf">See the Latest PDF version</a></p>
 
 <a name="EDUCATION"></a>
 
@@ -15,7 +15,7 @@ layout: page
 
 
 * **Worcester Polytechnic Institute (WPI), Worcester, MA USA**
-	- Doctor of Philosophy in Robotics Engineering, GPA: 3.90 - 08/2013 to Present
+	- Doctor of Philosophy in Mechanical Engineering, GPA: 3.92 - 08/2013 to Present
 	- Master of Science in Robotics Engineering, GPA: 3.83/4 - 06/2013
 * **North China Electric Power University (NCEPU), China**
 	- Bachelor of Engineering in Automation, GPA: 87.9/100 - 07/2011
