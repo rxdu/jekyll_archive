@@ -17,11 +17,11 @@ My research interest is to study the control and motion planning of mobile robot
 
 In Proceedings
 
-* **"Image Stitching Techniques for An Intelligent Portable Aerial Surveillance System,"**, <u>Ruixiang Du</u>, Taskin Padir, IEEE TePRA 2014 ([pdf]())
-
 * **"Human-Supervised Control of the ATLAS Humanoid Robot for Traversing Doors,"**, Nandan Banerjee, Xianchao Long, <u>Ruixiang Du</u>, Felipe Polido, Siyuan Feng, Christopher Atkeson, Michael Gennert, Taskin Padir, IEEE Humanoids 2015
 
 * **"NO FALLS, NO RESETS: Reliable Humanoid Behavior in the DARPA Robotics Challenge,"**, Christopher Atkeson, Nandan Banerjee, Dmitry Berenson, Mathew DeDonato, <u>Ruixiang Du</u>, Siyuan Feng, Joohyung Kim, Kevin Knoedler, Chenggang Liu, Xianchao Long, Felipe Polido, Michael Gennert, Taskin Padir, X Xinjilefu, Benzun Pious Wisely Babu, Christopher Bove, Joshua Graff, Peng He, Aaron Jaeger, Lening Li, IEEE Humanoids 2015
+
+* **"Image Stitching Techniques for An Intelligent Portable Aerial Surveillance System,"**, <u>Ruixiang Du</u>, Taskin Padir, IEEE TePRA 2014 ([pdf]())
 
 **Workshop:**
 

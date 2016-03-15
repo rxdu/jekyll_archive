@@ -7,7 +7,7 @@ layout: page
 &nbsp; [EDUCATION](#EDUCATION) &nbsp;--&nbsp; [TECHNICAL SKILLS](#SKILLS) &nbsp;--&nbsp; [RA&TA](#RATA) &nbsp;--&nbsp; [PROJECTS](#PROJECTS) &nbsp;--&nbsp;  [HONORS](#HONORS) &nbsp;--&nbsp; [ACTIVITIES](#ACTIVITIES)
 
 <p></p>
-<p align="right"><a href="{{ root_url }}/resume/RuixiangDuResume201601.pdf">See the Latest PDF version</a></p>
+<p align="right"><a href="{{ root_url }}/resume/Ruixiang_Du_Resume_Feb2016.pdf">See the Latest PDF version</a></p>
 
 <a name="EDUCATION"></a>
 
@@ -15,7 +15,7 @@ layout: page
 
 
 * **Worcester Polytechnic Institute (WPI), Worcester, MA USA**
-	- Doctor of Philosophy in Mechanical Engineering, GPA: 3.92 - 08/2013 to Present
+	- Doctor of Philosophy in Mechanical Engineering, GPA: 3.92 - 08/2013 - Present
 	- Master of Science in Robotics Engineering, GPA: 3.83/4 - 06/2013
 * **North China Electric Power University (NCEPU), China**
 	- Bachelor of Engineering in Automation, GPA: 87.9/100 - 07/2011
@@ -24,9 +24,11 @@ layout: page
 
 ## <span style="color: CadetBlue ">TECHNICAL SKILLS</span>
 
+* **Robotics**: modeling, simulation, control and motion planning of robots
+* **Programming Languages**: C/C++, Matlab, Python
 * **Software**: Matlab, V-REP, Eclipse, Git
-* **Programming**: C/C++, Robot Operating System (ROS), OpenCV, PCL, wxWidgets, Qt
-* **Microcontroller**: AVR, Freescale S12/S12X, Cortex-M3/M4, ARM7
+* **Software & Frameworks**: ROS, V-REP, Gazebo, LCM, Git, GCC, Qt, wxWidgets
+* **Embedded Hardware**: Cortex-M3/M4, AVR, HCS12, MSP430, Raspberry Pi
 
 I'm familiar with development in both Windows and Linux. A lot of my project development work is done in Ubuntu with C++ and ROS. I'm comfortable with using open-source tools, such as Eclipse and GNU toolchains, to do embedded development. I use Git a lot to manage both my personal projects and projects collaborating with others in the lab.
 
@@ -35,8 +37,10 @@ I'm familiar with development in both Windows and Linux. A lot of my project dev
 ## <span style="color: CadetBlue ">RESEARCH & TEACHING EXPERIENCE</span>
 
 * **Research Assistant**
+	- SRCL Lab, Professor Raghvendra V. Cowlagi, 01/2016 - Present
 	- [RIVeR Lab](http://robot.wpi.edu/), Professor Taskin Padir , 10/2014-08/2015
 * **Teaching Assistant**
+	- ECE3849, Real-time Embedded Systems, Prof. Gene Bogdanov, 2015 Fall B term
 	- ECE2049, Embedded Computing in Engineering Design, Prof. Susan Jarvis, 2015 Fall A term
 	- ECE2010, Introduction to ECE, Professor William Michalson, 2014 Fall A term
 	- RBE502, Robot Control, Professor Taskin Padir, 2014 Spring C&D Term
@@ -48,6 +52,13 @@ I'm familiar with development in both Windows and Linux. A lot of my project dev
 <a name="PROJECTS"></a>
 
 ## <span style="color: CadetBlue ">PROJECTS</span>
+
+#### Hierarchical Motion Planning for Small Unmanned Aerial Vehicles, WPI 01/2016-Present
+
+- Conducted a literature review on mobile robot motion planning, with special attention to
+methods for realizing agile maneuver of aerial vehicles
+- Implemented quadtree-based map representation and A* path finding algorithm
+- Studying motion planning under uncertainties and with dynamical constraints for UAVs
 
 #### [Robot Simulation Toolset, WPI 07/2015-08/2015](/projects/robotsim)
 <!--
