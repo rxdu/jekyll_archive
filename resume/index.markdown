@@ -26,7 +26,6 @@ layout: page
 
 * **Robotics**: modeling, simulation, control and motion planning of robots
 * **Programming Languages**: C/C++, Matlab, Python
-* **Software**: Matlab, V-REP, Eclipse, Git
 * **Software & Frameworks**: ROS, V-REP, Gazebo, LCM, Git, GCC, Qt, wxWidgets
 * **Embedded Hardware**: Cortex-M3/M4, AVR, HCS12, MSP430, Raspberry Pi
 
