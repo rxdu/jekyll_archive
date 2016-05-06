@@ -5,7 +5,7 @@ title: research
 
 ## Research Interests
 
-My research interest is to study the control and motion planning of mobile robots to make them more reactive to obstacles and capable of making safe and agile movements in cluttered and dynamic environments. I'm also interested in robot simulation and human-robot collaboration on challenging tasks.
+My research focus is on the control and motion planning of mobile robots to make them more reactive to obstacles and capable of making safe and agile movements in cluttered and dynamic environments. I'm also interested in robot simulation and human-robot collaboration on challenging tasks.
 
 ## Publications
 
