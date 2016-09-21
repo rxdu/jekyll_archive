@@ -7,7 +7,7 @@ layout: page
 &nbsp; [EDUCATION](#EDUCATION) &nbsp;--&nbsp; [TECHNICAL SKILLS](#SKILLS) &nbsp;--&nbsp; [RA&TA](#RATA) &nbsp;--&nbsp; [PROJECTS](#PROJECTS) &nbsp;--&nbsp;  [HONORS](#HONORS) &nbsp;--&nbsp; [ACTIVITIES](#ACTIVITIES)
 
 <p></p>
-<p align="right"><a href="{{ root_url }}/resume/Ruixiang_Du_Resume_Feb2016.pdf">See the Latest PDF version</a></p>
+<p align="right"><a href="{{ root_url }}/resume/Ruixiang_Du_Resume_Sep2016.pdf">See the Latest PDF version</a></p>
 
 <a name="EDUCATION"></a>
 
