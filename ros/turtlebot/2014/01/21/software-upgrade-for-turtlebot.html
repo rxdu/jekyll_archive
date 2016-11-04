@@ -101,9 +101,9 @@
 
 <p>This <a href="http://ros.org/wiki/Robots/TurtleBot">Robots/Turtlebot</a> page provides well written documents of ROS packages for turtlebot. First follow <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Installation">Installation</a> step by step. The easiest way should be “Install from Debs”. On the <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Post-Installation%20Setup">Post-Installation Setup</a> page, you first need to install chrony for clock synchronization. Don’t forget to check the section ‘'’Special Cases’’’. Probably you need to take care of <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Create%20Base">Create Base</a> and <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Netbook%20Battery%20Setup">Netbook Battery Setup</a>. Be careful that the Netbook Battery Setup instruction is not up to date at the time this wiki is written. The robot cannot find battery information of the netbook from “/proc/acpi/battery/BAT1”. Instead, use “/sys/class/power_supply/BAT1” and the command changes to:</p>
 
-<p><code>
- $export TURTLEBOT_BATTERY=/proc/acpi/battery/BAT1
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code> $export TURTLEBOT_BATTERY=/proc/acpi/battery/BAT1
+</code></pre>
+</div>
 
 <p>Follow <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Workstation%20Installation">Workstation Installation</a> and <a href="http://ros.org/wiki/turtlebot/Tutorials/groovy/Network%20Configuration">Network Configuration</a> to make sure your robot can communicate with the work station successfully.</p>
 
@@ -111,21 +111,21 @@
 
 <p>Now you can step to the next section of [http://ros.org/wiki/Robots/TurtleBot Robots/Turtlebot]. Work is still not done. When following the <a href="http://ros.org/wiki/turtlebot_bringup/Tutorials/groovy/TurtleBot%20Bringup">turtlebot_bringup/Tutorials/groovy/TurtleBot Bringup</a>, probably you will get errors when you try to execute roslaunch command:</p>
 
-<p><code>
-$roslaunch turtlebot_bringup minimal.launch
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$roslaunch turtlebot_bringup minimal.launch
+</code></pre>
+</div>
 
 <p>If you get a error message like this:</p>
 
-<p><code>
-Failed to open port /dev/ttyUSB0.  Please make sure the Create cable is plugged into the computer.
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Failed to open port /dev/ttyUSB0.  Please make sure the Create cable is plugged into the computer.
+</code></pre>
+</div>
 
 <p>It’s because you don’t have the necessary access permission to the ttyUSB0 device. The solution is to add the user account you’re using to the “dialout” group.</p>
 
-<p><code>
- $sudo adduser second_user dialout
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code> $sudo adduser second_user dialout
+</code></pre>
+</div>
 
 <p>Now you should be able to successfully roslaunch the above launch file. After starting minimal.launch and then turtlebot_dashboard.launch, you should get information of the robot from the dashboard.</p>
 
