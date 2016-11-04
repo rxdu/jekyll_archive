@@ -3,7 +3,7 @@ layout: post
 title: "MCU Programming Tips"
 date: 2015-05-26
 comments: true
-categories: [[C/C++,Programming]]
+categories: [C,Programming]
 ---
 
 Here are some tips that might be helpful to improve your code for microcontrollers. It's not a complete list but most of the issues mentioned here are commonly seen during the lab sessions of ECE2049 at WPI and probably from any code by new embedded programmers.
