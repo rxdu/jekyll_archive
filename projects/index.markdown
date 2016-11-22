@@ -11,7 +11,7 @@ footer: true
 
 **[Control and Motion Planning for Quadrotors in Simulation](/projects/uav_planning)**
 
-| This project is to support my research work at SRCL on motion planning of UAVs. It started from the "robot simulation toolkit" project with special attention on quadrotors and a lot of features have been added since then. A complete set of functions have been implemented, from attitude/positoin control, graph search, sampling-based search, polynomial trajectory generation, logging, data visualization, etc..  | | <img src="/img/projects/traj_tracking.png" width="900"/> |
+| This project is to support my research work at SRCL on motion planning of UAVs. It started from the "robot simulation toolkit" project with special attention on quadrotors and a lot of features have been added since then. A complete set of functions have been implemented from attitude/position control, graph search, sampling-based search, polynomial trajectory generation, logging, data visualization, etc..  | | <img src="/img/projects/traj_tracking.png" width="900"/> |
 
 <br>
 **[Robot Simulation Toolkit](/projects/robotsim)**

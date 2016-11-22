@@ -8,11 +8,9 @@ footer: true
 Control and Motion Planning for Quadrotors in Simulation
 ======
 
-This project is to support my research work at SRCL on motion planning of UAVs. It started from the "robot simulation toolkit" project with special attention on quadrotors and a lot of features have been added since then.
-
 Currently the code repository for this project includes the following:
 
-* quadrotor simulations: AscTec Hummingbird, 3DR Solo
+* quadrotor simulations: AscTec Hummingbird, 3DR Solo,Bitcraze Crazyflie 2
 * quaternion-based attitude and position controller
 * space partitioning data structures (square grid, quadtree, 3d cube array)
 * class templates for graph construction and A* search, [GitHub Repo](https://github.com/rxdu/astar_search)
