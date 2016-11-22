@@ -15,7 +15,7 @@ layout: page
 
 
 * **Worcester Polytechnic Institute (WPI), Worcester, MA USA**
-	- Doctor of Philosophy in Mechanical Engineering, GPA: 3.92 - 08/2013 - Present
+	- Doctor of Philosophy in Mechanical Engineering, GPA: 3.93 - 12/2017
 	- Master of Science in Robotics Engineering, GPA: 3.83/4 - 06/2013
 * **North China Electric Power University (NCEPU), China**
 	- Bachelor of Engineering in Automation, GPA: 87.9/100 - 07/2011
@@ -26,81 +26,67 @@ layout: page
 
 * **Robotics**: modeling, simulation, control and motion planning of robots
 * **Programming Languages**: C/C++, Matlab, Python
-* **Software & Frameworks**: ROS, V-REP, Gazebo, LCM, Git, GCC, Qt, wxWidgets
-* **Embedded Hardware**: Cortex-M3/M4, AVR, HCS12, MSP430, Raspberry Pi
-
-I'm familiar with development in both Windows and Linux. A lot of my project development work is done in Ubuntu with C++ and ROS. I'm comfortable with using open-source tools, such as Eclipse and GNU toolchains, to do embedded development. I use Git a lot to manage both my personal projects and projects collaborating with others in the lab.
-
-<a name="RATA"></a>
-
-## <span style="color: CadetBlue ">RESEARCH & TEACHING EXPERIENCE</span>
-
-* **Research Assistant**
-	- SRCL Lab, Professor Raghvendra V. Cowlagi, 01/2016 - Present
-	- [RIVeR Lab](http://robot.wpi.edu/), Professor Taskin Padir , 10/2014-08/2015
-* **Teaching Assistant**
-	- ECE3849, Real-time Embedded Systems, Prof. Gene Bogdanov, 2015 Fall B term
-	- ECE2049, Embedded Computing in Engineering Design, Prof. Susan Jarvis, 2015 Fall A term
-	- ECE2010, Introduction to ECE, Professor William Michalson, 2014 Fall A term
-	- RBE502, Robot Control, Professor Taskin Padir, 2014 Spring C&D Term
-	- ECE3503, Power Electronics, Professor Alexander E. Emanuel, 2013 Fall B term
-	- ECE2010, Introduction to ECE, Professor James P. O’Rourke, 2013 Fall A term
+* **Software & Frameworks**: ROS, V-REP, Gazebo, OMPL, LCM, Qt, Git, Linux
+* **Embedded Development**: Cortex-M3/M4, AVR, MSP430 (bare metal or with RTOS)
 
 <p align="right"><a href="#TOP">Back To Top</a></p>
+
+<a name="EXPERIENCE"></a>
+
+## <span style="color: CadetBlue ">EXPERIENCE</span>
+
+#### Hierarchical Motion Planning for Small Unmanned Aerial Vehicles, WPI 01/2016-Present
+*Research Assistant in Systems and Robot Control Laboratory*
+
+- Implemented 2D map representation using square grid and quadtree
+- Integrated Octomap and constructed graph representing local 3D space
+- Experimented with A* and RRT* to find optimal paths online with limited global information
+and onboard sensor data in a partially known environment
+- Tested a QP-based minimum-snap optimization algorithm for fast local trajectory generation
+- Exploring motion planning algorithms for one task agent with multiple sensing agents
+
+#### [DARPA Robotics Challenge Trials & Finals: Team WPI-CMU, WPI  09/2013-06/2015](/projects/drc)
+*Research Assistant in Robotics and Intelligent Vehicles Research Laboratory*
+
+<!--
+<img src="/img/projects/drc_drill_robot.JPG" height="80"/>
+<img src="/img/projects/drc_drill_hole.JPG" height="80" />
+-->
+- Participated in the discussion and decision making of overall team strategies and led a subteam towards the completion of wall task for the Finals
+- Implemented a state machine and position and force controllers for the wall cutting task
+- Studied the whole-body manipulation controller developed by CMU and collaborated on the
+interfacing with task-level features
+- Experimented on strategies for the door task of DRC Trials to traverse different types of doors
+- Developed the motions and user control interface for the door task using MoveIt and Qt
+- Performed numerous tests on both the real Atlas Robot and the Gazebo simulator to tune
+controller parameters and explore feasible motions
 
 <a name="PROJECTS"></a>
 
 ## <span style="color: CadetBlue ">PROJECTS</span>
 
-#### Hierarchical Motion Planning for Small Unmanned Aerial Vehicles, WPI 01/2016-Present
-
-- Conducted a literature review on mobile robot motion planning, with special attention to
-methods for realizing agile maneuver of aerial vehicles
-- Implemented quadtree-based map representation and A* path finding algorithm
-- Studying motion planning under uncertainties and with dynamical constraints for UAVs
-
-#### [Robot Simulation Toolset, WPI 07/2015-08/2015](/projects/robotsim)
+#### [Physics-Based Robot Simulation Toolkit, WPI 07/2015-08/2015](/projects/robotsim)
 <!--
 <img src="/img/projects/sim_pelican_arm.jpg" height="80"/>
 <img src="/img/projects/sim_quadrotor.jpg" height="80" />
 <img src="/img/projects/sim_rc_car.png" height="80"/>
 <img src="/img/projects/sim_log.png" height="80"/>
 -->
-- Built the simulator for the 2-link Pelican Robot Arm, the AscTec Hummingbird Quadrotor and an Ackerman-Steering RC Car in V-REP
-- Implemented code to interface with the simulator for each simulated robot
-- Compared existing C/C++ logging frameworks and integrated g3log into the simulation/control code
-- Wrote Matlab Scripts to analyze log files generated by the logger
+- Constructed the simulation for the 2-link pelican robot arm, the AscTec Hummingbird quadrotor and an ackerman-steering RC car in V-REP
+- Implemented code to interface with the simulator for each simulated robot using ROS, Matlab and C++ remote-API interfaces
+- Integrated a C++ logger into the simulation/control code and wrote Matlab scripts to analyze log files generated by the logger
 
-
-#### [DARPA Robotics Challenge(DRC) Finals: Team WPI-CMU, WPI 07/2014-06/2015](/projects/drc)
-<!--
-<img src="/img/projects/drc_drill_robot.JPG" height="80"/>
-<img src="/img/projects/drc_drill_hole.JPG" height="80" />
--->
-- Worked as the lead of wall task to control the Atlas Robot to drill a hole on the wall
-- Implemented the state machine and force control algorithm for drill motions
-- Worked with [Siyuan Feng](http://www.cs.cmu.edu/~sfeng/) on the whole-body manipulation controller to enable the robot to perform varies of tasks as
-well as keep balance
-
-
-#### [DARPA Robotics Challenge(DRC) Trials: Team WRECS, WPI 09/2013-12/2013](/projects/drc)
-<!--
-<img src="/img/projects/drc_door.jpg" height="80" />
-<img src="/img/projects/door_task_panel.png" height="80"/>
--->
-- Worked on door task in the aspects of manipulation and door detection with point clouds
-- Developed a user interface for the operation of Boston Dynamics Atlas Robot in DRC Trials
-- Tested different strategies to finish task on both the real robot and robot in Gazebo simulation
-
-
-#### [Robotic System for Use of Fall Risk Assessment in Home Environment, WPI 07/2013-08/2013, 01/2014-05/2014](/projects/fallrisk)
+#### [Robotics Enabled In-Home Environment Screening for Fall Risks, WPI 07/2013-08/2013, 01/2014-05/2014](/projects/fallrisk)
 <!--
 <img src="/img/projects/fall_risk_turtle.jpg" height="80"/>
 <img src="/img/projects/web_interface.png" height="80"/>
 -->
-- Worked out a robotic framework for home fall risk assessment
-- Implemented a web interface for Turtlebot2 platform to make the system accessible from a webpage
-- Studyed the navigation of robots in home environment and hazard detection for fall risk assessment
+- Worked out a robotic framework for home fall risk assessment, including setting up the software for both the Turtlebot2 platform and the Gazebo simulator, adding new sensors and
+developing drivers, implementing a web interface based on the ”Robot Management System”
+to make the system accessible from a web page
+- Studied the navigation of mobile robots in home environment and potential applications of
+robotic technologies for improving the life quality of elderly people, prepared preliminary
+results for proposal of further research on this topic
 
 
 #### [Intelligent Portable Aerial Surveillance System – IPASS, WPI 12/2012-05/2013](/projects/ipass)
@@ -108,8 +94,10 @@ well as keep balance
 <img src="/img/projects/basic_model_02.jpg" height="80"/>
 <img src="/img/projects/Picture1.jpg" height="80"/>
 -->
-- Developed the dynamics model of the aircraft and simulated its control in   Matlab
-- Worked on image stitching with OpenCV to get panoramas from 3 cameras on the aircraft
+- Developed the dynamics model of the aircraft and designed controller with Matlab simulation
+- Provided support to the undergraduate team of this project for improving the mechanical
+design of the aircraft, based on the theoretical analysis
+- Evaluated different image stitching techniques to get panoramas from cameras on the aircraft
 
 <!-- <p align="right"><a href="#TOP">Back To Top</a></p> -->
 
@@ -150,21 +138,24 @@ well as keep balance
 - Designed and implemented the control algorithm for model car with S12XS128
 - Developed a monitoring software for the status of the car with LabVIEW
 
-<a name="HONORS"></a>
+<a name="TA"></a>
 
-## <span style="color: CadetBlue ">HONORS</span>
+## <span style="color: CadetBlue ">ADDITIONAL EXPERIENCE</span>
 
-- Received Outstanding Graduate Award of Hebei Province, NCEPU, China, 2011
-- Awarded academic scholarship each year, NCEPU, 2007-2010
-- Earned the 2nd and 3rd prize in the 5th and 4th Freescale Cup Intelligent Car Racing Contest, 2009-2010
+*Teaching Assistant of the Electrical and Computer Engineering Department, WPI*
 
-<a name="ACTIVITIES"></a>
+- ECE3849, Real-time Embedded Systems, Prof. Gene Bogdanov, 2015 Fall B term
+- ECE2049, Embedded Computing in Engineering Design, Prof. Susan Jarvis, 2015 Fall A term
+- ECE2010, Introduction to ECE, Professor William Michalson, 2014 Fall A term
+- RBE502, Robot Control, Professor Taskin Padir, 2014 Spring C&D Term
+- ECE3503, Power Electronics, Professor Alexander E. Emanuel, 2013 Fall B term
+- ECE2010, Introduction to ECE, Professor James P. O’Rourke, 2013 Fall A term
 
-## <span style="color: CadetBlue ">ACTIVITIES</span>
+<a name="AFFILIATIONS"></a>
+
+## <span style="color: CadetBlue ">PROFESSIONAL AFFILIATIONS</span>
 
 - Student Member, IEEE Robotics and Automation Society, IEEE, 03/2013-Present
 - Member, Rho Beta Epsilon robotics honors fraternity, WPI, 02/2013-Present
-- Head of Technology Committee, NCEPU Network Management Association, NCEPU, 09/2009-09/2010
-- Vice-president, Science Association of the Department of Automation, NCEPU, 09/2009-09/2010
 
 <p align="right"><a href="#TOP">Back To Top</a></p>

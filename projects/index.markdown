@@ -9,6 +9,11 @@ footer: true
 
 *****
 
+**[Control and Motion Planning for Quadrotors in Simulation](/projects/uav_planning)**
+
+| This project is to support my research work at SRCL on motion planning of UAVs. It started from the "robot simulation toolkit" project with special attention on quadrotors and a lot of features have been added since then. A complete set of functions have been implemented, from attitude/positoin control, graph search, sampling-based search, polynomial trajectory generation, logging, data visualization, etc..  | | <img src="/img/projects/traj_tracking.png" width="900"/> |
+
+<br>
 **[Robot Simulation Toolkit](/projects/robotsim)**
 
 | This project aims at making a collection of tools for robot simulation. The project takes advantages of existing open-source libraries and frameworks, making modifications to best accommodate robotic applications. Currently V-REP is used for the physics-based simulation. G3LOG is integrated to provide the logging function for debugging and system performance evaluation. LCM and ROS are experimented to bridge different frameworks and provide access to various robotic packages.  | | <img src="/img/projects/sim_quadrotor.jpg" width="1100"/> |
@@ -19,7 +24,7 @@ footer: true
 | The DARPA Robotics Challenge (DRC) was introduced after the Fukushima nuclear disaster which happened in Japan, 2011, and it aims at pushing the boundaries of technology so as to make life saving robotics systems available for future disasters. WPI's entry of the DRC started from the Virtual Robotics Challenge phase, in which we got the 2nd place and won an Atlas Robot built by Boston Dynamics. We competed in the DRC Trials in Florida, December 2013 and entered the final phase of the competition as one of the finalist teams. In California, June 2015, our team successfully finished the DRC Finals and ranked the 7th out of 23 competing teams from all over the world. | | <img src="/img/projects/drc_atlas_back.JPG" width="1500"/> |
 
 <br>
-**[Robotic System for Use of Fall Risk Assessment in Home Environment](/projects/fallrisk)**
+**[Robotics Enabled In-Home Environment Screening for Fall Risks](/projects/fallrisk)**
 
 | Fall risks present in living environment are the leading cause of mortality in older adults. Limited number of trained professionals to assess a house for fall risks and higher costs make the prevention of fall risks inaccessible to many necessitous patients. This project focuses on the design of a robot control system for in-home environment screening. The system is designed to be capable of supporting both manual and autonomous fall-risk assessment, including measuring distance between 2 objects, assessing lighting conditions, and interacting with the patient using telepresence. | | <img src="/img/projects/fall_risk_turtlebot2.JPG" width="1300"/> |
 
