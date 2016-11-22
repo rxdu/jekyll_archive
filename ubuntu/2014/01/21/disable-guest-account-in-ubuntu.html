@@ -14,13 +14,13 @@
 	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter, UAV, motion planning" />
 
 
-  <meta name="description" content="Sometimes you may feel annoying to accidentally login to the guest account on you personal computer. But unlike Mac OS, you cannot disable this account directly from “System Settings”.
+  <meta name="description" content="Sometimes you may feel annoying to accidentally login to the guest account on you personal computer. But unlike Mac OS, you cannot disable this account directly from &#8220;System Settings&#8221;.
 
 ">
-  <meta property="og:description" content="Sometimes you may feel annoying to accidentally login to the guest account on you personal computer. But unlike Mac OS, you cannot disable this account directly from “System Settings”.
+  <meta property="og:description" content="Sometimes you may feel annoying to accidentally login to the guest account on you personal computer. But unlike Mac OS, you cannot disable this account directly from &#8220;System Settings&#8221;.
 
 " />
-  <meta name="twitter:description" content="Sometimes you may feel annoying to accidentally login to the guest account on you personal computer. But unlike Mac OS, you cannot disable this account directly from “System Settings”.
+  <meta name="twitter:description" content="Sometimes you may feel annoying to accidentally login to the guest account on you personal computer. But unlike Mac OS, you cannot disable this account directly from &#8220;System Settings&#8221;.
 
 " />
 
@@ -84,28 +84,32 @@
 <p>You can get it by following these steps:</p>
 
 <ol>
-  <li>Open a terminal and enter command:
-    <div class="highlighter-rouge"><pre class="highlight"><code>$ gksudo gedit /etc/lightdm/lightdm.conf
-</code></pre>
-    </div>
+  <li>
+    <p>Open a terminal and enter command:
+<code>
+$ gksudo gedit /etc/lightdm/lightdm.conf
+</code></p>
   </li>
-  <li>Add one line at the end of the file:
-    <div class="highlighter-rouge"><pre class="highlight"><code>$ allow-guest=false
-</code></pre>
-    </div>
+  <li>
+    <p>Add one line at the end of the file:
+<code>
+$ allow-guest=false
+</code></p>
   </li>
-  <li>Now you should see something like this in the file:
-    <div class="highlighter-rouge"><pre class="highlight"><code>[SeatDefaults]
+  <li>
+    <p>Now you should see something like this in the file:
+<code>
+[SeatDefaults]
 greeter-session=unity-greeter
 user-session=ubuntu
 allow-guest=false
-</code></pre>
-    </div>
+</code></p>
   </li>
-  <li>Save and exit the file. Restart lightdm:
-    <div class="highlighter-rouge"><pre class="highlight"><code>$ sudo restart lightdm
-</code></pre>
-    </div>
+  <li>
+    <p>Save and exit the file. Restart lightdm:
+<code>
+$ sudo restart lightdm
+</code></p>
   </li>
 </ol>
 
