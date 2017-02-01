@@ -13,6 +13,8 @@ My research focus is on the control and motion planning of mobile robots to make
 
 * **“Human-in-the-Loop Control of a Humanoid Robot for Disaster Response: A Report from the DARPA Robotics Challenge Trials,”**, DeDonato, M., Dimitrov, V., <u>Du, R.</u>, Giovacchini, R., Knoedler, K., Long, X., Polido, F., Gennert, M., Padir, T., Feng, S., Moriguchi, H., Whitman, E., Xinjilefu, X., Atkeson, C., Journal of Field Robotics, Volume 32, Pages 275-292, 2015
 
+* **"Team WPI-CMU: Achieving Reliable Humanoid Behavior in the DARPA Robotics Challenge"**, DeDonato, M., Polido, F., Knoedler, K., Babu, B. P. W., Banerjee, N., Bove, C. P., Cui, X., <u>Du, R.</u>, Franklin, P., Graff, J. P., He, P., Jaeger, A., Li, L., Berenson, D., Gennert, M. A., Feng, S., Liu, C., Xinjilefu, X., Kim, J., Atkeson, C. G., Long, X. and Padır, T, Journal of Field Robotics, doi:10.1002/rob.21685, 2017
+
 **Conference:**
 
 In Proceedings
