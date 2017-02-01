@@ -83,55 +83,55 @@
 
 <p>With ROS Groovy installed on Ubuntu 12.04, I was trying to install Gazebo simulator. I followed instructions on this page: http://gazebosim.org/wiki/1.6/install#Compile_Instructions. Following Compile Instructions, gazebo was installed in the default directory, but step 11 gave the error:</p>
 
-<p><code>
-$ gazebo
+<div class="highlighter-rouge"><pre class="highlight"><code>$ gazebo
 gazebo: error while loading shared libraries: libgazebo_common.so.1: cannot open shared object file: No such file or directory
-</code>
-<!-- more --></p>
+</code></pre>
+</div>
+<!-- more -->
 
 <p>From the Gazebo Answers website, I found the solution to this problem provided by <em>gerkey</em>. It seemed the original link for this ask-and-answer post was broken and only a cached paged by google could be visited. Since this post solved my problem, I copy it here for future reference:</p>
 
 <hr />
 <p>Answer:</p>
 
-<p><code>
-sudo bash -c "echo /usr/local/lib &gt;&gt; /etc/ld.so.conf"
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo bash -c "echo /usr/local/lib &gt;&gt; /etc/ld.so.conf"
 sudo ldconfig
-</code></p>
+</code></pre>
+</div>
 
 <p>First, let’s understand the situation:</p>
 
-<p><code>
-ldd `which gazebo` | grep "not found"
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>ldd `which gazebo` | grep "not found"
+</code></pre>
+</div>
 
 <p>That will give you a list of the libraries that the executable needs, but that the loader can’t find. Probably libgazebo_common.so will be in that list, likely along with many other lib_gazebo* libraries.</p>
 
 <p>If you did a default install, it went into /usr/local. By default, your system loader might be configured not to look in /usr/local/lib. To test that, add that directory to your LD_LIBRARY_PATH:</p>
 
-<p><code>
-LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH ldd `which gazebo` | grep "not found"
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH ldd `which gazebo` | grep "not found"
+</code></pre>
+</div>
 
 <p>If that gives you an empty list, then you’re ready to go, in which case you run gazebo like so:</p>
 
-<p><code>
-LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH gazebo
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH gazebo
+</code></pre>
+</div>
 
 <p>or:</p>
 
-<p><code>
-export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+<div class="highlighter-rouge"><pre class="highlight"><code>export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 gazebo
-</code></p>
+</code></pre>
+</div>
 
 <p>But it’s better not to have to remember that. So you can configure your system to look in /usr/local/lib for libraries:</p>
 
-<p><code>
-sudo bash -c "echo /usr/local/lib &gt;&gt; /etc/ld.so.conf"
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo bash -c "echo /usr/local/lib &gt;&gt; /etc/ld.so.conf"
 sudo ldconfig
-</code></p>
+</code></pre>
+</div>
 
 <p>That should work for gazebo and for anything else that you install to /usr/local.</p>
 
@@ -177,7 +177,7 @@ sudo ldconfig
 
       </section>
       <footer class="grid site-footer">
-        <p> &copy;&nbsp; 2016 - Ruixiang Du -
+        <p> &copy;&nbsp; 2017 - Ruixiang Du -
   <span class="credit">Powered by <a href="http://jekyllrb.com">Jekyll</a></span>
       </footer>
       

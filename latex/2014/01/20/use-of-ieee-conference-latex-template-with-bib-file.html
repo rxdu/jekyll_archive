@@ -14,13 +14,13 @@
 	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter, UAV, motion planning" />
 
 
-  <meta name="description" content="Recently I need to use the IEEE LaTex template (from this site) for a conference paper. This template doesn&#8217;t use a .bib file for the management of references unless you make some modifictions. In my first try to use it, I got this error during compiling:
+  <meta name="description" content="Recently I need to use the IEEE LaTex template (from this site) for a conference paper. This template doesn’t use a .bib file for the management of references unless you make some modifictions. In my first try to use it, I got this error during compiling:
 
 ">
-  <meta property="og:description" content="Recently I need to use the IEEE LaTex template (from this site) for a conference paper. This template doesn&#8217;t use a .bib file for the management of references unless you make some modifictions. In my first try to use it, I got this error during compiling:
+  <meta property="og:description" content="Recently I need to use the IEEE LaTex template (from this site) for a conference paper. This template doesn’t use a .bib file for the management of references unless you make some modifictions. In my first try to use it, I got this error during compiling:
 
 " />
-  <meta name="twitter:description" content="Recently I need to use the IEEE LaTex template (from this site) for a conference paper. This template doesn&#8217;t use a .bib file for the management of references unless you make some modifictions. In my first try to use it, I got this error during compiling:
+  <meta name="twitter:description" content="Recently I need to use the IEEE LaTex template (from this site) for a conference paper. This template doesn’t use a .bib file for the management of references unless you make some modifictions. In my first try to use it, I got this error during compiling:
 
 " />
 
@@ -81,9 +81,9 @@
 	<section>
 		<p>Recently I need to use the IEEE LaTex template (from this <a href="http://www.ieee.org/conferences_events/conferences/publishing/templates.html">site</a>) for a conference paper. This template doesn’t use a .bib file for the management of references unless you make some modifictions. In my first try to use it, I got this error during compiling:</p>
 
-<p><code>
-Something's wrong--perhaps a missing \item. \end{thebibliography}
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Something's wrong--perhaps a missing \item. \end{thebibliography}
+</code></pre>
+</div>
 
 <p><!-- more -->
 I googled this issue and tried different solutions. Finally I figured it out how to fix this error (thanks to Velin’s help). The following are the steps to make a successful compilation.</p>
@@ -94,44 +94,44 @@ I googled this issue and tried different solutions. Finally I figured it out how
   <li>Uncomment the line:</li>
 </ul>
 
-<p><code>
-\usepackage{cite}
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>\usepackage{cite}
+</code></pre>
+</div>
 
 <ul>
   <li>Uncomment the lines:</li>
 </ul>
 
-<p><code>
-\bibliographystyle{IEEEtran}
+<div class="highlighter-rouge"><pre class="highlight"><code>\bibliographystyle{IEEEtran}
 \bibliography{IEEEabrv,../bib/paper}
-</code></p>
+</code></pre>
+</div>
 
 <p>specify the name and location of your .bib file. For example, change the second line above to:</p>
 
-<p><code>
-\bibliography{IEEEexample}
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>\bibliography{IEEEexample}
+</code></pre>
+</div>
 
 <ul>
   <li>Comment the lines:</li>
 </ul>
 
-<p><code>
-\begin{thebibliography}{1}
+<div class="highlighter-rouge"><pre class="highlight"><code>\begin{thebibliography}{1}
 \bibitem{IEEEhowto:kopka}
 H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
 \end{thebibliography}
-</code></p>
+</code></pre>
+</div>
 
 <ul>
   <li>Cite at least one item in the paper. For example, add</li>
 </ul>
 
-<p><code>
-\cite{IEEEexample:article_typical} 
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>\cite{IEEEexample:article_typical} 
+</code></pre>
+</div>
 
 <p>at the end of the acknowledgement section.</p>
 
@@ -185,7 +185,7 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 
       </section>
       <footer class="grid site-footer">
-        <p> &copy;&nbsp; 2016 - Ruixiang Du -
+        <p> &copy;&nbsp; 2017 - Ruixiang Du -
   <span class="credit">Powered by <a href="http://jekyllrb.com">Jekyll</a></span>
       </footer>
       
