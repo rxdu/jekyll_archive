@@ -9,7 +9,7 @@ footer: true
 
 *****
 
-**[Planning for Connected & Autonomous Vehicles](/projects/uav_planning)**
+**[Planning for Connected & Autonomous Vehicles]()**
 
 Recently started. More details to be added.
 
