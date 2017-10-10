@@ -85,27 +85,23 @@
 
 <ol>
   <li>Open a terminal and enter command:
-    <div class="highlighter-rouge"><pre class="highlight"><code>$ gksudo gedit /etc/lightdm/lightdm.conf
-</code></pre>
-    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gksudo gedit /etc/lightdm/lightdm.conf
+</code></pre></div>    </div>
   </li>
   <li>Add one line at the end of the file:
-    <div class="highlighter-rouge"><pre class="highlight"><code>$ allow-guest=false
-</code></pre>
-    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ allow-guest=false
+</code></pre></div>    </div>
   </li>
   <li>Now you should see something like this in the file:
-    <div class="highlighter-rouge"><pre class="highlight"><code>[SeatDefaults]
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[SeatDefaults]
 greeter-session=unity-greeter
 user-session=ubuntu
 allow-guest=false
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>Save and exit the file. Restart lightdm:
-    <div class="highlighter-rouge"><pre class="highlight"><code>$ sudo restart lightdm
-</code></pre>
-    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo restart lightdm
+</code></pre></div>    </div>
   </li>
 </ol>
 
