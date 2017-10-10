@@ -9,6 +9,12 @@ footer: true
 
 *****
 
+**[Planning for Connected & Autonomous Vehicles](/projects/uav_planning)**
+
+Recently started. More details to be added.
+
+
+<br>
 **[Control and Motion Planning for Quadrotors in Simulation](/projects/uav_planning)**
 
 | This project is to support my research work at SRCL on motion planning of UAVs. It started from the "robot simulation toolkit" project with special attention on quadrotors and a lot of features have been added since then. A complete set of functions have been implemented from attitude/position control, graph search, sampling-based search, polynomial trajectory generation, logging, data visualization, etc..  | | <img src="/img/projects/traj_tracking.png" width="900"/> |
@@ -55,5 +61,6 @@ footer: true
 
 I put most of my project source code on Github and Bitbucket. Some of the projects are my hobby projects and some are created for learning. I put a few of them here. The goal is to maintain a log for the ongoing hobby projects and to keep a reference for those I feel useful for learning a specific topic.
 
+* [Autonomous RC Car](/projects/rccar) - ongoing
 * [Build Your Own Quadcopter](/projects/buildquad) - ongoing
 * [Operating Systems Course Project](/projects/myos) - closed

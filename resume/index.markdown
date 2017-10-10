@@ -35,8 +35,17 @@ layout: page
 
 ## <span style="color: CadetBlue ">EXPERIENCE</span>
 
-#### Hierarchical Motion Planning for Small Unmanned Aerial Vehicles, WPI 01/2016-Present
-*Research Assistant in Systems and Robot Control Laboratory*
+#### Planning for Connected & Autonomous Vehicles, WPI 09/2017-Present
+*Research Assistant in Autonomy, Control, and Estimation Laboratory*
+
+- Ongoing research
+
+#### Autonomous Vehicle Intern, nuTonomy 05/2017-08/2017
+
+- Worked on intent estimation and motion planning for self-driving cars
+
+#### [Hierarchical Motion Planning for Small Unmanned Aerial Vehicles, WPI 01/2016-09/2017](/projects/uav_planning)
+*Research Assistant in Autonomy, Control, and Estimation Laboratory*
 
 - Implemented 2D map representation using square grid and quadtree
 - Integrated Octomap and constructed graph representing local 3D space
