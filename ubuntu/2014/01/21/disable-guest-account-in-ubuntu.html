@@ -85,23 +85,23 @@
 
 <ol>
   <li>Open a terminal and enter command:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gksudo gedit /etc/lightdm/lightdm.conf
-</code></pre></div>    </div>
+    <div class="highlighter-rouge"><pre class="codehilite"><code>$ gksudo gedit /etc/lightdm/lightdm.conf
+</code></pre>    </div>
   </li>
   <li>Add one line at the end of the file:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ allow-guest=false
-</code></pre></div>    </div>
+    <div class="highlighter-rouge"><pre class="codehilite"><code>$ allow-guest=false
+</code></pre>    </div>
   </li>
   <li>Now you should see something like this in the file:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[SeatDefaults]
+    <div class="highlighter-rouge"><pre class="codehilite"><code>[SeatDefaults]
 greeter-session=unity-greeter
 user-session=ubuntu
 allow-guest=false
-</code></pre></div>    </div>
+</code></pre>    </div>
   </li>
   <li>Save and exit the file. Restart lightdm:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo restart lightdm
-</code></pre></div>    </div>
+    <div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo restart lightdm
+</code></pre>    </div>
   </li>
 </ol>
 
@@ -149,7 +149,7 @@ allow-guest=false
 
       </section>
       <footer class="grid site-footer">
-        <p> &copy;&nbsp; 2017 - Ruixiang Du -
+        <p> &copy;&nbsp; 2018 - Ruixiang Du -
   <span class="credit">Powered by <a href="http://jekyllrb.com">Jekyll</a></span>
       </footer>
       
