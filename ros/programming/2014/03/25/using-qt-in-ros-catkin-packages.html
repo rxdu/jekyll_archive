@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Using QT in ROS Catkin Packages | Ruixiang Du</title>
         
-          <meta name="author" content="https://github.com/rxdu">
+          <meta name="author" content="rxdu">
         
         <meta name="title" content="Using QT in ROS Catkin Packages" >
-        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="icon" type="image/png" href="http://localhost:4000/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
 	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter, UAV, motion planning" />
@@ -26,11 +26,11 @@
 
 <meta property="og:title" content="Using QT in ROS Catkin Packages" />
 <meta property="og:type" content="article" />
-<meta property="og:image" content="/sharer.png" />
+<meta property="og:image" content="http://localhost:4000/sharer.png" />
 <meta property="og:url" content="/ros/programming/2014/03/25/using-qt-in-ros-catkin-packages.html" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Using QT in ROS Catkin Packages" />
-<meta name="twitter:image" content="/sharer.png" />
+<meta name="twitter:image" content="http://localhost:4000/sharer.png" />
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/monokai.css">
@@ -85,7 +85,7 @@
 
 <p>The example package includes the following files:</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>++ rviz_gui_package
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ rviz_gui_package
  ++ src
    +- rviz_gui.cpp
    +- rviz_gui.h
@@ -93,11 +93,11 @@
    +- main.cpp
  +- CMakeLists.txt
  +- package.xml
-</code></pre></div>
+</code></pre></div></div>
 
 <p>To compile a QT executable widget, you need to add the following to your CMakeLists.txt:</p>
 
-<div class="language-cmake highlighter-rouge"><pre class="codehilite"><code><span class="nb">find_package</span><span class="p">(</span>Qt4 COMPONENTS QtCore QtGui REQUIRED<span class="p">)</span>
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">find_package</span><span class="p">(</span>Qt4 COMPONENTS QtCore QtGui REQUIRED<span class="p">)</span>
 
 <span class="nb">include</span><span class="p">(</span><span class="si">${</span><span class="nv">QT_USE_FILE</span><span class="si">}</span><span class="p">)</span>
 <span class="nb">add_definitions</span><span class="p">(</span>-DQT_NO_KEYWORDS<span class="p">)</span>
@@ -130,7 +130,7 @@
 
 <span class="nb">add_executable</span><span class="p">(</span>rviz_gui <span class="si">${</span><span class="nv">SOURCE_FILES</span><span class="si">}</span> <span class="si">${</span><span class="nv">MOC_SRC_H</span><span class="si">}</span> <span class="si">${</span><span class="nv">MOC_GUI_H</span><span class="si">}</span><span class="p">)</span>
 <span class="nb">target_link_libraries</span><span class="p">(</span>rviz_gui <span class="si">${</span><span class="nv">QT_LIBRARIES</span><span class="si">}</span> <span class="si">${</span><span class="nv">catkin_LIBRARIES</span><span class="si">}</span><span class="p">)</span>
-</code></pre></div>
+</code></pre></div></div>
 
 <p>To understand why you should do this, you need to understand the QT build system. For detailed illustration, read this <a href="http://qt-project.org/quarterly/view/using_cmake_to_build_qt_projects">Document</a> from qt-project.org. <strong>The image shown below is also from this document</strong>. I include it here just for convinence of reference.</p>
 

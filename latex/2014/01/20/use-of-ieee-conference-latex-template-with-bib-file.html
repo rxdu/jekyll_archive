@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Use of IEEE Conference LaTex Template with .bib File | Ruixiang Du</title>
         
-          <meta name="author" content="https://github.com/rxdu">
+          <meta name="author" content="rxdu">
         
         <meta name="title" content="Use of IEEE Conference LaTex Template with .bib File" >
-        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="icon" type="image/png" href="http://localhost:4000/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
 	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter, UAV, motion planning" />
@@ -26,11 +26,11 @@
 
 <meta property="og:title" content="Use of IEEE Conference LaTex Template with .bib File" />
 <meta property="og:type" content="article" />
-<meta property="og:image" content="/sharer.png" />
+<meta property="og:image" content="http://localhost:4000/sharer.png" />
 <meta property="og:url" content="/latex/2014/01/20/use-of-ieee-conference-latex-template-with-bib-file.html" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Use of IEEE Conference LaTex Template with .bib File" />
-<meta name="twitter:image" content="/sharer.png" />
+<meta name="twitter:image" content="http://localhost:4000/sharer.png" />
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/monokai.css">
@@ -81,8 +81,8 @@
 	<section>
 		<p>Recently I need to use the IEEE LaTex template (from this <a href="http://www.ieee.org/conferences_events/conferences/publishing/templates.html">site</a>) for a conference paper. This template doesn’t use a .bib file for the management of references unless you make some modifictions. In my first try to use it, I got this error during compiling:</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>Something's wrong--perhaps a missing \item. \end{thebibliography}
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Something's wrong--perhaps a missing \item. \end{thebibliography}
+</code></pre></div></div>
 
 <p><!-- more -->
 I googled this issue and tried different solutions. Finally I figured it out how to fix this error (thanks to Velin’s help). The following are the steps to make a successful compilation.</p>
@@ -93,39 +93,39 @@ I googled this issue and tried different solutions. Finally I figured it out how
   <li>Uncomment the line:</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>\usepackage{cite}
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\usepackage{cite}
+</code></pre></div></div>
 
 <ul>
   <li>Uncomment the lines:</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>\bibliographystyle{IEEEtran}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\bibliographystyle{IEEEtran}
 \bibliography{IEEEabrv,../bib/paper}
-</code></pre></div>
+</code></pre></div></div>
 
 <p>specify the name and location of your .bib file. For example, change the second line above to:</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>\bibliography{IEEEexample}
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\bibliography{IEEEexample}
+</code></pre></div></div>
 
 <ul>
   <li>Comment the lines:</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>\begin{thebibliography}{1}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\begin{thebibliography}{1}
 \bibitem{IEEEhowto:kopka}
 H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
 \end{thebibliography}
-</code></pre></div>
+</code></pre></div></div>
 
 <ul>
   <li>Cite at least one item in the paper. For example, add</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>\cite{IEEEexample:article_typical} 
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\cite{IEEEexample:article_typical} 
+</code></pre></div></div>
 
 <p>at the end of the acknowledgement section.</p>
 

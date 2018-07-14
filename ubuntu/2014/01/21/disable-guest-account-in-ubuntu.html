@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Disable Guest Account in Ubuntu | Ruixiang Du</title>
         
-          <meta name="author" content="https://github.com/rxdu">
+          <meta name="author" content="rxdu">
         
         <meta name="title" content="Disable Guest Account in Ubuntu" >
-        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="icon" type="image/png" href="http://localhost:4000/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
 	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter, UAV, motion planning" />
@@ -26,11 +26,11 @@
 
 <meta property="og:title" content="Disable Guest Account in Ubuntu" />
 <meta property="og:type" content="article" />
-<meta property="og:image" content="/sharer.png" />
+<meta property="og:image" content="http://localhost:4000/sharer.png" />
 <meta property="og:url" content="/ubuntu/2014/01/21/disable-guest-account-in-ubuntu.html" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Disable Guest Account in Ubuntu" />
-<meta name="twitter:image" content="/sharer.png" />
+<meta name="twitter:image" content="http://localhost:4000/sharer.png" />
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/monokai.css">
@@ -85,23 +85,23 @@
 
 <ol>
   <li>Open a terminal and enter command:
-    <div class="highlighter-rouge"><pre class="codehilite"><code>$ gksudo gedit /etc/lightdm/lightdm.conf
-</code></pre>    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gksudo gedit /etc/lightdm/lightdm.conf
+</code></pre></div>    </div>
   </li>
   <li>Add one line at the end of the file:
-    <div class="highlighter-rouge"><pre class="codehilite"><code>$ allow-guest=false
-</code></pre>    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ allow-guest=false
+</code></pre></div>    </div>
   </li>
   <li>Now you should see something like this in the file:
-    <div class="highlighter-rouge"><pre class="codehilite"><code>[SeatDefaults]
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[SeatDefaults]
 greeter-session=unity-greeter
 user-session=ubuntu
 allow-guest=false
-</code></pre>    </div>
+</code></pre></div>    </div>
   </li>
   <li>Save and exit the file. Restart lightdm:
-    <div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo restart lightdm
-</code></pre>    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo restart lightdm
+</code></pre></div>    </div>
   </li>
 </ol>
 

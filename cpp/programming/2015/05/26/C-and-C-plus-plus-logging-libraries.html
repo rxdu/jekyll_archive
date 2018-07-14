@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>C/C++ Logging Frameworks | Ruixiang Du</title>
         
-          <meta name="author" content="https://github.com/rxdu">
+          <meta name="author" content="rxdu">
         
         <meta name="title" content="C/C++ Logging Frameworks" >
-        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="icon" type="image/png" href="http://localhost:4000/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
 	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter, UAV, motion planning" />
@@ -26,11 +26,11 @@
 
 <meta property="og:title" content="C/C++ Logging Frameworks" />
 <meta property="og:type" content="article" />
-<meta property="og:image" content="/sharer.png" />
+<meta property="og:image" content="http://localhost:4000/sharer.png" />
 <meta property="og:url" content="/cpp/programming/2015/05/26/C-and-C-plus-plus-logging-libraries.html" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="C/C++ Logging Frameworks" />
-<meta name="twitter:image" content="/sharer.png" />
+<meta name="twitter:image" content="http://localhost:4000/sharer.png" />
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/monokai.css">
@@ -145,7 +145,7 @@
 
 <p>I’m kind of using this library in a non-conventional way, for most of the time. Instead of logging information of events, I’m logging robot state and control data into the log file. Below shows part of a log file created from a quadrotor control simulation.</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>g3log created log at: Thu Nov 03 17:37:49 2016
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g3log created log at: Thu Nov 03 17:37:49 2016
 
 0,	DATA,	pos_x, pos_y, pos_z, pos_d_x, pos_d_y, pos_d_z, pos_e_x, pos_e_y, pos_e_z, quat_x, quat_y, quat_z, quat_w, quat_d_x, quat_d_y, quat_d_z, quat_d_w, yaw, yaw_d, vel_x, vel_y, vel_z, vel_d_x, vel_d_y, vel_d_z, vel_e_x, vel_e_y, vel_e_z, acc_d_x, acc_d_y, acc_d_z, jerk_d_x, jerk_d_y, jerk_d_z, omega_d_x, omega_d_y, omega_d_z
 362411,	DATA,	-1.800000 , 2.000000 , 0.040250 , -1.800000 , 0.600000 , 0.800000 , 0.000000 , -1.400000 , 0.759750 , -0.000000 , -0.000000 , -0.382683 , 0.923880 , 0.224765 , 0.000000 , 0.000000 , 0.974413 , -0.785398 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 24.351215 , -24.351219 , 0.000000
@@ -154,7 +154,7 @@
 871028,	DATA,	-1.802876 , 1.999059 , 0.049349 , -1.800000 , 0.600000 , 0.800000 , 0.002876 , -1.399059 , 0.750651 , 0.085447 , -0.093776 , -0.375101 , 0.918262 , 0.235515 , 0.012104 , 0.000000 , 0.971795 , -0.764907 , 0.000000 , -0.083995 , -0.027585 , 0.332757 , 0.000000 , 0.000000 , 0.000000 , 0.083995 , 0.027585 , -0.332757 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.809954 , -0.320561 , 0.000000
 1030266,	DATA,	-1.804119 , 1.998787 , 0.058138 , -1.800000 , 0.600000 , 0.800000 , 0.004119 , -1.398787 , 0.741862 , 0.130342 , -0.076177 , -0.371604 , 0.916034 , 0.242111 , 0.010155 , 0.000000 , 0.970195 , -0.748079 , 0.000000 , -0.067079 , -0.008667 , 0.449114 , 0.000000 , 0.000000 , 0.000000 , 0.067079 , 0.008667 , -0.449114 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.000000 , 0.810381 , -1.153780 , 0.000000
 ......
-</code></pre></div>
+</code></pre></div></div>
 
 <p>From this log file I can recover the robot state and plot data that I’m interested in. For example, the plot created from the above log file is shown below:</p>
 

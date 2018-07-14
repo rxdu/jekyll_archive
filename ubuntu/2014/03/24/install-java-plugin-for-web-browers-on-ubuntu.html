@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Install Java Plugin for Web Browers on Ubuntu | Ruixiang Du</title>
         
-          <meta name="author" content="https://github.com/rxdu">
+          <meta name="author" content="rxdu">
         
         <meta name="title" content="Install Java Plugin for Web Browers on Ubuntu" >
-        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="icon" type="image/png" href="http://localhost:4000/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
 	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter, UAV, motion planning" />
@@ -26,11 +26,11 @@
 
 <meta property="og:title" content="Install Java Plugin for Web Browers on Ubuntu" />
 <meta property="og:type" content="article" />
-<meta property="og:image" content="/sharer.png" />
+<meta property="og:image" content="http://localhost:4000/sharer.png" />
 <meta property="og:url" content="/ubuntu/2014/03/24/install-java-plugin-for-web-browers-on-ubuntu.html" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Install Java Plugin for Web Browers on Ubuntu" />
-<meta name="twitter:image" content="/sharer.png" />
+<meta name="twitter:image" content="http://localhost:4000/sharer.png" />
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/monokai.css">
@@ -83,33 +83,33 @@
 
 <p>1.Install Java Runtime Environment 64bit</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo add-apt-repository ppa:webupd8team/java
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo add-apt-repository ppa:webupd8team/java
 $ sudo apt-get update
 $ sudo apt-get install oracle-java7-installer
-</code></pre></div>
+</code></pre></div></div>
 
 <!-- more -->
 
 <p>2.Enable Java Plugin for Chrome 64bit</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>sudo mkdir /opt/google/chrome/plugins
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir /opt/google/chrome/plugins
 cd /opt/google/chrome/plugins
 sudo ln -s /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libnpjp2.so
-</code></pre></div>
+</code></pre></div></div>
 
 <p>3.Enable Java Plugin for Mozilla Firefox 64bit</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>cd /usr/lib/mozilla/plugins
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /usr/lib/mozilla/plugins
 sudo mkdir /usr/lib/mozilla/plugins
 sudo ln -s /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libnpjp2.so
-</code></pre></div>
+</code></pre></div></div>
 
 <p><strong>Note</strong>:</p>
 
 <p>If you don’t want to install JRE in the way mentioned above, make sure you give the right path for the command:</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>sudo ln -s /&lt;right-path-of-libnpjp2-so&gt;/libnpjp2.so
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ln -s /&lt;right-path-of-libnpjp2-so&gt;/libnpjp2.so
+</code></pre></div></div>
 
 <p>Reference: 
 <a href="http://m.wikihow.com/Enable-Oracle-Java-in-Your-Web-Browsers-on-Ubuntu-Linux">How to Enable Oracle Java in Your Web Browsers on Ubuntu Linux</a></p>

@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Install Eclipse in Ubuntu | Ruixiang Du</title>
         
-          <meta name="author" content="https://github.com/rxdu">
+          <meta name="author" content="rxdu">
         
         <meta name="title" content="Install Eclipse in Ubuntu" >
-        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="icon" type="image/png" href="http://localhost:4000/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
 	<meta name="keywords" content="robotics, embedded, open-source, control, navigation, mobile robot, quadcopter, UAV, motion planning" />
@@ -26,11 +26,11 @@
 
 <meta property="og:title" content="Install Eclipse in Ubuntu" />
 <meta property="og:type" content="article" />
-<meta property="og:image" content="/sharer.png" />
+<meta property="og:image" content="http://localhost:4000/sharer.png" />
 <meta property="og:url" content="/ubuntu/eclipse/2014/01/21/install-eclipse-in-ubuntu.html" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Install Eclipse in Ubuntu" />
-<meta name="twitter:image" content="/sharer.png" />
+<meta name="twitter:image" content="http://localhost:4000/sharer.png" />
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/monokai.css">
@@ -81,10 +81,10 @@
 	<section>
 		<p>First make sure you have installed JAVA in ubuntu to run Eclipse.</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo add-apt-repository ppa:webupd8team/java
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo add-apt-repository ppa:webupd8team/java
 $ sudo apt-get update
 $ sudo apt-get install oracle-java7-installer
-</code></pre></div>
+</code></pre></div></div>
 
 <ul>
   <li>Download the latest Eclipse from its official website.</li>
@@ -92,16 +92,16 @@ $ sudo apt-get install oracle-java7-installer
   <li>Move the extracted folder to whereever you want to put it.</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo mv eclipse /opt/ 
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo mv eclipse /opt/ 
+</code></pre></div></div>
 
 <ul>
   <li>Create a symlink in /usr/local/bin using</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>$ cd /usr/local/bin
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /usr/local/bin
 $ sudo ln -s /opt/eclipse/eclipse
-</code></pre></div>
+</code></pre></div></div>
 
 <ul>
   <li>Now you should be able to run eclipse from a terminal.</li>
