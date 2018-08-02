@@ -15,7 +15,7 @@ layout: page
 
 
 * **Worcester Polytechnic Institute (WPI), Worcester, MA USA**
-	- Doctor of Philosophy in Mechanical Engineering, GPA: 3.93 - 12/2017
+	- Doctor of Philosophy in Mechanical Engineering, GPA: 3.94 - 05/2019
 	- Master of Science in Robotics Engineering, GPA: 3.83/4 - 06/2013
 * **North China Electric Power University (NCEPU), China**
 	- Bachelor of Engineering in Automation, GPA: 87.9/100 - 07/2011
@@ -42,7 +42,7 @@ layout: page
 
 #### Autonomous Vehicle Intern, nuTonomy 05/2017-08/2017
 
-- Worked on intent estimation and motion planning for self-driving cars
+- Worked on maneuver intent inference and motion planning for self-driving cars
 
 #### [Hierarchical Motion Planning for Small Unmanned Aerial Vehicles, WPI 01/2016-09/2017](/projects/uav_planning)
 *Research Assistant in Autonomy, Control, and Estimation Laboratory*
