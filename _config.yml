@@ -13,7 +13,7 @@ sass:
 paginate: 5
 paginate_path: "tech_notes/page:num"
 plugins_dir: [jekyll-paginate]
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 ##The website description (to be used in meta tags)
 description: This is the personal website of Ruixiang Du. This site includes a basic profile of Ruixiang and introductions to his study and research. The site also serves as a personal knowledge base, including technical notes and a wiki. It's aimed at providing convenience of access to knowledge/experience collections for Ruixiang, as well as sharing such information to others on the Internet.
 ##Some frequently used keywords on your website
