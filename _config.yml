@@ -6,7 +6,7 @@ markdown: kramdown
 highlighter: rouge
 
 ##define base_url for valid usage in sitemap.xml and robots.txt
-base_url: http://rdu.im
+base_url: https://rdu.im
 sass:
   sass_dir: _sass
   style: :compressed
