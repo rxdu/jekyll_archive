@@ -15,7 +15,7 @@ layout: page
 
 
 * **Worcester Polytechnic Institute (WPI), Worcester, MA USA**
-	- Doctor of Philosophy in Mechanical Engineering, GPA: 3.94 - 05/2019
+	- Doctor of Philosophy in Mechanical Engineering, GPA: 3.93 - 12/2019
 	- Master of Science in Robotics Engineering, GPA: 3.83/4 - 06/2013
 * **North China Electric Power University (NCEPU), China**
 	- Bachelor of Engineering in Automation, GPA: 87.9/100 - 07/2011
